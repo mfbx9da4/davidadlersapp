@@ -1,0 +1,1059 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="devsite">
+
+  
+
+  <head>
+    <meta charset="utf-8" />
+    <script src="/_static/js/script_head.js"></script>
+    <link rel="stylesheet" type="text/css" href="/_static/css/screen.css" />
+    <link rel="shortcut icon" href="/_static/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/_static/images/apple-touch-icon.png">
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script id="jqueryui" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js"></script>
+    <script src="//www.google.com/jsapi?key=AIzaSyCZfHRnq7tigC-COeQRmoa9Cxr0vbrK6xw"></script>
+
+    <script type="text/javascript" src="//www.gstatic.com/feedback/api.js"></script>
+    <script type="text/javascript" src="/jsi18n/"></script>
+    <!--[if lt IE 9]>
+    <script src="/_static/js/html5shim/html5.js"></script>
+    <![endif]-->
+
+    
+  <script type="text/javascript">
+    var contentTimer = new window.jstiming.Timer();
+
+    var ___gcfg = ___gcfg || {};
+    ___gcfg.lang = 'en';
+  </script>
+  
+  <title>Getting Started - Google Fonts &mdash; Google Developers</title>
+  
+  
+  
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Tangerine|Rancho|Source+Sans+Pro:900&effect=3d|3d-float|anaglyph|brick-sign|canvas-print|crackle|decaying|destruction|distressed|distressed-wood|emboss|fire|fire-animation|fragile|grass|ice|mitosis|neon|outline|putting-green|scuffed-steel|shadow-multiple|splintered|static|stonewash|vintage|wallpaper" />
+  
+
+
+    
+    
+
+  </head>
+  <body class="two-column docs">
+    
+    <div id="sandbar">
+      
+      
+
+
+
+
+<header id="gc-googlebar">
+
+  <a id="gc-logo" href="/">
+    <img src="/_static/images/developers-logo.svg" alt="Google"/>
+  </a>
+<script>
+if (!Modernizr || !Modernizr.svg) {
+  $('#gc-logo img').attr({src:'/_static/images/developers-logo.png'});
+}
+</script>
+
+  <div class="gc-social">
+    
+    <span class="signed-in">
+      <div>
+        <a class='email' href="https://plus.google.com/me">dalberto.adler@gmail.com</a>
+        <a href="https://www.google.com/accounts/Logout?continue=https://developers.google.com/fonts/docs/getting_started&amp;service=ahsid">Sign out</a>
+      </div>
+      <img src="/_static/images/silhouette36.png?sz=30"/>
+    </span>
+    
+  </div>
+
+  <form class="gc-search" action="/search/results" method="GET">
+    <div class="searchbox">
+      
+      
+        <span class="button button-blue mini">Google Fonts</span>
+      
+      <input type="text" name="q" class="q" id="q" value="" placeholder='Search' autocomplete="off" />
+    </div>
+    <button class="button button-blue">
+      <img src="/_static/images/search.png" alt="Search"/>
+    </button>
+    
+      <input type="hidden" name="p" id="search_project" value="/fonts" />
+    
+  </form>
+
+</header>
+
+
+<script>
+  var a=!1,h=window.devsite||{};window.devsite=h;var _gaq=_gaq||[];WebFontConfig={google:{families:["Open+Sans"]}};h.location=window.location;h.reloadWindow=function(){h.location.reload()};h.openWindow=window.open;h.devsite=h.devsite||{};h.devsite.dialogConfig={autoOpen:a,modal:!0,show:"fade",dialogClass:"msgDialog",closeText:"",resizable:a,draggable:a,zIndex:9999};h.KD_FADE_LONG=218;h.KD_FADE_SHORT=130;h.progress=h.progress||{};h.progress.INTERVAL_TIME_MS=460;h.progress.MAX_LOOP=100;h.progress.RIGHT_MARGIN=6;h.progress.TOP_MARGIN=-15;
+h.progress.kennedyProgressDot=function(c){var b=c.parent().find(".progress");b.remove();h.progress.circleInnerHtml='<span class="mask first"><span class="base"></span><span class="mover"></span></span><span class="mask second"><span class="base"></span><span class="mover"></span></span>';h.progress.spinnerHtml='<div class="circle initial"><span class="mask"><span class="mover"></span></span></div><div class="circle red"></div><div class="circle yellow"></div><div class="circle green"></div><div class="circle blue"></div>';b=
+$("<div></div>").prop("id","loader").prop("class","yellow").html(h.progress.spinnerHtml);b.find(".red").html(h.progress.circleInnerHtml);b.find(".blue").html(h.progress.circleInnerHtml);b.find(".green").html(h.progress.circleInnerHtml);b.find(".yellow").html(h.progress.circleInnerHtml);b.css({position:"absolute",right:h.progress.RIGHT_MARGIN+"px",top:h.progress.TOP_MARGIN+"px"});c.parent().append(b);c=function(){this.colorIndex=-1;this.colors=["red","yellow","green","blue"];this.loader=b;this.loopCount=
+0;this.shouldStop=a};c.prototype.start=function(){var b=this;this.loader.removeClass();this.loader.addClass("firstTime");this.interval=setInterval(function(){b.loop()},h.progress.INTERVAL_TIME_MS)};c.prototype.loop=function(){this.loopCount+=1;this.loader.hasClass("firstTime")?(this.loader.removeClass("firstTime"),this.loader.addClass("initial")):this.loader.hasClass("stopped")?(this.loader.removeClass("stopped"),this.loader.addClass("finishing")):this.loader.hasClass("finishing")?(clearInterval(this.interval),
+b.remove()):(this.colorIndex=(this.colorIndex+1)%this.colors.length,this.loader.removeClass(),this.loader.addClass(this.colors[this.colorIndex]),(this.shouldStop||this.loopCount>h.progress.MAX_LOOP)&&this.loader.addClass("stopped"))};c.prototype.stop=function(){this.shouldStop=!0};var e=new c;return c={start:function(){$.fx.off||e.start()},clear:function(){b.remove()},error:function(){e.stop()}}};h.progress=h.progress||{};
+h.progress.progressDot=function(c){function b(){d+=1;100>d&&f.animate({opacity:"toggle"},h.KD_FADE_LONG,b)}var e=6,f=c.parent().find(".progress");f.remove();f=$("<div></div>").addClass("progress");f.css({position:"absolute","border-radius":e+"px",border:e+"px solid #3D9400",right:e+"px",top:c.parent().height()/2-e+"px",width:0,height:0});c.parent().append(f);var d=0;return c={start:function(){$.fx.off||b()},clear:function(){f.remove()},error:function(){f.stop();f.css({opacity:1,border:e+"px solid #DD4B39"})}}};h.location=window.location;h.setTimeout=function(){return window.setTimeout.apply(window,arguments)};h.clearTimeout=function(){window.clearTimeout.apply(window,arguments)};h.localInit=function(){h.search.init()};h.search={KEY_ESC:27,fadeTime:h.KD_FADE_SHORT,keyDelay:300};
+h.search.init=function(){h.search.initResultHandlers();var c=$(".gc-search");c.submit(function(){if(window.devsite.geo){var b=window.devsite.geo.lat+","+window.devsite.geo.lon,b=$('<input type="hidden" name="l"/>').val(b);c.append(b)}});var b=$("#q");b.unbind("keyup click");b.bind("keyup click",function(b){h.search.timeout&&h.clearTimeout(h.search.timeout);$(this).val()&&b.keyCode!=h.search.KEY_ESC?h.search.timeout=h.setTimeout(function(){h.search.updateResults()},h.search.keyDelay):h.search.removeAutocomplete()});
+var b=$(".searchbox").children(".button"),e=$("#restrict input");(e.is(":checked")||0==e.length&&0!=b.length)&&h.search.grow();$("body").delegate("#restrict input","click",function(){$(this).is(":checked")?h.search.grow($("#restrict input").val()):h.search.shrink();h.search.updateResults();$("#q").focus()})};
+h.search.initResultHandlers=function(){$(".search-results .result").unbind("click");$(".search-results .result").click(function(){var c={type:$(this).data("type"),url:$(this).data("url"),hl:$(this).data("hl"),q:$(this).data("q")};$.post("/search/go",c,function(b){b&&(h.location.href=b)});return a})};h.search.fadeOutIfExists=function(c,b,e){c&&c.length?c.fadeOut(b,e):e()};h.search.removeAutocomplete=function(){var c=$(".search-autocomplete");c.remove();h.search.lastQ=null};
+h.search.grow=function(c){var b=$("#q"),e=$(".searchbox"),f=$(".gc-search").children("button"),d=e.children(".button");if(c){var d=b.val(),g=$(".results").data("query-match");g&&b.val(d.substr(g.length+1));d=$("<span></span>");d.addClass("button button-blue mini");d.text($("#restrict").find("span").text());d.data("query-match",g);e.prepend(d);g=$("<input />");g.attr({id:"search_project",type:"hidden",name:"p",value:c});$(".gc-search").append(g)}d.append($("<pre>  X</pre>"));g=$(".searchbox").width();
+c=d.outerWidth(!0);var l=e.outerWidth(!0)+c;e.css("width",l+"px");b.css("width",g+"px");b=f.offset();b.left+=c+10;f.offset(b);f=function(){h.search.shrink();$("#q").focus()};d.click(f)};
+h.search.shrink=function(){var c=$("#q"),b=$(".searchbox"),e=b.children("input"),f=b.children(".button"),d=f.data("query-match");d&&e.val($.trim(d)+" "+e.val());e=$(".gc-search").children("button");$("#restrict input").prop("checked",a);$("#search_project").remove();d=f.outerWidth(!0);f.remove();f=e.offset();f.left-=d+10;b.css("width","");c.css("width","100%");e.offset(f)};
+h.search.updateResults=function(){var c=$(".searchbox"),b=$("#q"),e=$("#search_project"),f={q:$.trim(b.val()||"")};window.devsite.geo&&(f.l=window.devsite.geo.lat+","+window.devsite.geo.lon);e&&e.val()&&(f.p=escape(e.val()));if(!h.search.lastQ||!(h.search.lastQ.q==f.q&&h.search.lastQ.p==f.p)){h.search.lastQ=f;h.search.xhr&&h.search.xhr.abort();var d=$(".search-results");f.n=d.data("n")||4;var g=h.progress.kennedyProgressDot(b);g.start();h.search.xhr=$.get("/search/results",f,function(e){g.clear();
+e&&($("#what-q").text(f.q),d=$(".search-results"),h.search.fadeOutIfExists(d,h.search.fadeTime,function(){d.empty();if($.trim(e).length){if(!d.length){d=$("<div></div>").addClass("search-results search-autocomplete").data("n",4);$("body").append(d);var g=c.offset();d.css({position:"absolute",top:g.top+c.outerHeight()+3,left:g.left})}d.append(e);var g=$("#search-next"),k=d.children(".results").data("c");g.length?k?(g.attr("href","/search/results?c="+encodeURIComponent(k)+"&q="+encodeURIComponent(f.q)),
+g.show()):g.hide():$("#search-full").show();$("body").bind("click.searchAutocomplete",function(c){!$.contains(d.get(0),c.target)&&(!d.is(c.target)&&!b.is(c.target))&&d.hasClass("search-autocomplete")&&(h.search.removeAutocomplete(),$(this).unbind("click.searchAutocomplete"))});h.search.initResultHandlers();d.fadeIn(h.search.fadeTime)}}))});h.search.xhr.error(function(){g.error()})}};
+
+
+  if (window.jQuery) {
+    $(document).ready(function() {
+      window.devsite.search.init();
+
+      var loginLink = $('#loginLink');
+      if (loginLink.length > 0) {
+        loginLink.click(devsite.devsite.login);
+      }
+    });
+  }
+</script>
+
+      
+    </div>
+    
+
+    
+    
+
+    <div id="gc-wrapper" itemscope itemtype="http://schema.org/Article">
+      
+      <input id="gc-analytics" type="hidden" value="UA-24532603-1" />
+      
+
+      
+
+      <div id="gc-topnav">
+        <div>
+
+          
+          
+
+          <ul>
+
+            
+            
+
+            
+            
+            
+            
+            <li class=""><a href="/">Home</a></li>
+            
+            <li class="active"><a href="/products/">Products</a></li>
+            
+            <li class=""><a href="/events/">Conferences</a></li>
+            
+            <li class=""><a href="/showcase/">Showcase</a></li>
+            
+            <li class=""><a href="/live/">Live</a></li>
+            
+            <li class=""><a href="/groups/">Groups</a></li>
+            
+
+            
+            
+            
+          </ul>
+        </div>
+      </div>
+      
+      
+
+      
+      
+      
+        <div id="gc-appbar">
+          
+          
+<h1>
+
+  <a href="/fonts/">Google Fonts</a>
+  <div class="plusone-container">
+    <div class="g-plusone"
+      data-href="https://developers.google.com/fonts/docs/getting_started"
+      data-size="medium"
+      data-source="google:developers"></div>
+  </div>
+
+
+
+
+
+
+</h1>
+
+
+          
+        </div>
+      
+      
+
+      
+        
+      <div id="gc-main">
+        
+        
+  
+  
+      
+      
+      <div id="gc-sidebar">
+        
+
+  
+
+
+
+  <nav class="gc-toc"><ul><li class=""><a href="/fonts/docs/getting_started" data-title="Getting Started"><span>Getting Started</span></a></li><li class=""><a href="/fonts/docs/webfont_loader" data-title="WebFont Loader"><span>WebFont Loader</span></a></li><li class=""><a href="/fonts/docs/developer_api" data-title="Developer API"><span>Developer API</span></a></li><li class=""><a href="/fonts/docs/technical_considerations" data-title="Technical Considerations"><span>Technical Considerations</span></a></li><li class=""><a href="/fonts/faq" data-title="FAQ"><span>FAQ</span></a></li><li class=""><a href="/fonts/docs/troubleshooting" data-title="Troubleshooting"><span>Troubleshooting</span></a></li><li class=""><a href="/fonts/terms" data-title="Terms of Service"><span>Terms of Service</span></a></li></ul></nav>
+
+
+
+      </div>
+      
+
+      <div id="gc-content"
+           
+           
+           >
+        
+        <div>
+  
+          
+  
+  <h1 itemprop="name" class="page-title" >Getting Started</h1>
+  
+  <div itemprop="articleBody">
+  
+
+<p>This guide explains how to use the Google Fonts API to add fonts to your web pages. You don't need to do any programming; all you have to do is add a special stylesheet link to your HTML document, then refer to the font in a CSS style.</p>
+
+<h2>Contents</h2>
+<div class="toc">
+<ol>
+  <li><a href="#Quick_Start">A quick example</a></li>
+  <li><a href="#Overview">Overview</a></li>
+  <li><a href="#Syntax">Specifying font families and styles in a stylesheet URL</a></li>
+  <li><a href="#Subsets">Specifying script subsets</a></li>
+  <li><a href="#Optimizing_Requests">Optimizing your font requests (Beta)</a></li>
+  <li><a href="#Effects">Enabling font effects (Beta)</a></li>
+  <li><a href="#Further_Reading">Further reading</a></li>
+</ol>
+</div>
+
+<h2 id="Quick_Start">A quick example</h2>
+<p>Here's an example. Copy and paste the following HTML into a file:</p>
+<pre>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine"&gt;
+    &lt;style&gt;
+      body {
+        font-family: 'Tangerine', serif;
+        font-size: 48px;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div&gt;Making the Web Beautiful!&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>Then open the file in a modern web browser. You should see a page displaying the following, in the font called Tangerine:</p>
+<div style="font-family: 'Tangerine', serif; font-size: 48px; margin-top: 20px;">Making the Web Beautiful!</div>
+<p>That sentence is ordinary text, so you can change how it looks by using CSS. Try adding a shadow to the style in the previous example:</p>
+<pre>
+body {
+  font-family: 'Tangerine', serif;
+  font-size: 48px;
+  <strong>text-shadow: 4px 4px 4px #aaa;</strong>
+}
+</pre>
+<p>You should now see a drop shadow under the text:</p>
+<div style="font-family: 'Tangerine', serif; font-size: 48px; text-shadow: 4px 4px 4px #aaa; margin-top: 20px;">Making the Web Beautiful!</div>
+<p>And that's only the beginning of what you can do with the Fonts API and CSS.</p>
+
+<h2 id="Overview">Overview</h2>
+<p>You can start using the Google Fonts API in just two steps:</p>
+<ol>
+  <li>Add a stylesheet link to request the desired web font(s):
+    <pre>&lt;link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=<var>Font+Name</var>"&gt;</pre>
+  </li>
+  <li>Style an element with the requested web font, either in a stylesheet:
+<pre>
+<var>CSS selector</var> {
+  font-family: '<var>Font Name</var>', serif;
+}
+</pre>
+    or with an inline style on the element itself:
+    <pre>&lt;div style="font-family: '<var>Font Name</var>', serif;"&gt;<var>Your text</var>&lt;/div&gt;</pre>
+  </li>
+</ol>
+<p class="note"><strong>Note</strong>: When specifying a web font in a CSS style, always list at least one fallback web-safe font in order to avoid unexpected behaviors. In particular, add a CSS generic font name like <code>serif</code> or <code>sans-serif</code> to the end of the list, so the browser can fall back to its default fonts if need be.</p>
+<p>For a list of fonts you can use, see <a href="http://www.google.com/fonts">Google Fonts</a>.</p>
+
+<h2 id="Syntax">Specifying font families and styles in a stylesheet URL</h2>
+<p>To determine what URL to use in your stylesheet link, start with the Google Fonts API base URL:</p>
+<pre>http://fonts.googleapis.com/css</pre>
+<p>Then, add the <code>family=</code> URL parameter, with one or more font family names and styles.</p>
+<p>For example, to request the <a href="http://www.google.com/fonts/specimen/Inconsolata">Inconsolata</a> font:</p>
+<pre>http://fonts.googleapis.com/css?family=Inconsolata</pre>
+<p class="note"><strong>Note</strong>: Replace any spaces in the font family name with plus signs (<code>+</code>).</p>
+<p>To request multiple font families, separate the names with a pipe character (<code>|</code>).</p>
+<p>For example, to request the fonts <a href="http://www.google.com/fonts/specimen/Tangerine">Tangerine</a>, <a href="http://www.google.com/fonts/specimen/Inconsolata">Inconsolata</a>, and <a href="http://www.google.com/fonts/specimen/Droid+Sans">Droid Sans</a>:</p>
+<pre>http://fonts.googleapis.com/css?family=Tangerine|Inconsolata|Droid+Sans</pre>
+<p>Requesting multiple fonts allows you to use all of those fonts in your page. (But don't go overboard; most pages don't need very many fonts, and requesting a lot of fonts may make your pages slow to load.)</p>
+<p>The Google Fonts API provides the regular version of the requested fonts by default. To request other styles or weights, append a colon (<code>:</code>) to the name of the font, followed by a list of styles or weights separated by commas (<code>,</code>).</p>
+<p>For example:</p>
+<pre>http://fonts.googleapis.com/css?family=Tangerine:bold,bolditalic|Inconsolata:italic|Droid+Sans</pre>
+<p>To find out which styles and weights are available for a given font, see the font's listing in <a href="http://www.google.com/fonts">Google Fonts</a>.</p>
+<p>For each style you request, you can give either the full name or an abbreviation; for weights, you can alternatively specify a numerical weight:</p>
+<table>
+  <tr>
+    <th>Style</th>
+    <th>Specifiers</th>
+  </tr>
+  <tr>
+    <td>italic</td>
+    <td><code>italic</code> or <code>i</code></td>
+  </tr>
+  <tr>
+    <td>bold</td>
+    <td><code>bold</code> or <code>b</code> or a numerical weight such as 700</td>
+  </tr>
+  <tr>
+    <td>bold italic</td>
+    <td><code>bolditalic</code> or <code>bi</code></td>
+  </tr>
+</table>
+<p>For example, to request Cantarell italic and Droid Serif bold, you could use any of the following URLs:</p>
+<pre>http://fonts.googleapis.com/css?family=Cantarell:italic|Droid+Serif:bold</pre>
+<pre>http://fonts.googleapis.com/css?family=Cantarell:i|Droid+Serif:b</pre>
+<pre>http://fonts.googleapis.com/css?family=Cantarell:i|Droid+Serif:700</pre>
+
+<h2 id="Subsets">Specifying script subsets</h2>
+
+<p>
+Some of the fonts in the <a href="http://www.google.com/fonts">Google Font Directory</a> support multiple scripts (like Latin and Cyrillic for example).
+In order to specify which subsets should be downloaded the subset parameter should be appended to the URL.
+</p>
+<p>
+For example, to request the Cyrillic subset of the <a href="http://www.google.com/fonts/specimen/Philosopher">Philosopher</a> font, the URL would be:
+<pre>http://fonts.googleapis.com/css?family=Philosopher&amp;subset=cyrillic</pre>
+</p>
+<p>
+To request both the Latin and Cyrillic subset of the <a href="http://www.google.com/fonts/specimen/Philosopher">Philosopher</a> font, the URL would be:
+<pre>http://fonts.googleapis.com/css?family=Philosopher&amp;subset=latin,cyrillic</pre>
+</p>
+
+<p>
+For a complete list of available fonts and font subsets please see <a href="http://www.google.com/fonts">Google Fonts</a>.
+</p>
+
+<h2 id="Optimizing_Requests">Optimizing your font requests (Beta)</h2>
+<p>
+  Oftentimes, when you want to use a web font on your website or application,
+  you know in advance which letters you'll need. This often occurs when you're using a
+  web font in a logo or heading.
+</p>
+
+<p>
+  In these cases, you should consider specifying a <code>text=</code> value in your font request URL.
+  This allows Google to return a font file that's optimized for your request.
+  In some cases, this can reduce the size of the font file by up to 90%.
+</p>
+
+<p>
+  To use this new beta feature, simply add <code>text=</code> to your Google Fonts API requests.
+  For example if you're only using Inconsolata for the title of your blog, you can put the title
+  itself as the value of <code>text=</code>. Here is what the request would look like:
+</p>
+
+<pre>http://fonts.googleapis.com/css?family=Inconsolata&amp;text=Hello</pre>
+
+<p>
+  As with all query strings, you should URL-encode the value:
+</p>
+
+<pre>http://fonts.googleapis.com/css?family=Inconsolata&amp;text=Hello%20World</pre>
+
+<p>
+  This feature also works for international fonts, allowing you to specify UTF-8 characters.
+  For example, ¡Hola! is represented as:
+</p>
+
+<pre>http://fonts.googleapis.com/css?family=Inconsolata&amp;text=%c2%a1Hola!</pre>
+
+<p>
+Note: there's no need to specify the <code>subset=</code> parameter when using <code>text=</code>
+as it allows you to refer to any character in the original font.
+</p>
+
+<h2 id="Effects">Enabling font effects (Beta)</h2>
+<p>
+  When making headers or display texts on your website, you'll often want to stylize your text in a
+  decorative way. To simplify your work, Google has provided a collection of font effects that you
+  can use with minimal effort to produce beautiful display text. For example:
+</p>
+
+<div class="font-effect-shadow-multiple" style="font-family:Rancho; font-size: 72px; text-align: center;">This is a font effect!</div>
+
+<p>
+  To use this new beta feature, simply add <code>effect=</code> to your Google Fonts API request
+  and add the corresponding class name to the HTML element(s) that you want to affect. In our
+  example above, we used the <code>shadow-multiple</code> font effect, so the request would look like:
+</p>
+
+<pre>http://fonts.googleapis.com/css?family=Rancho&amp;effect=shadow-multiple</pre>
+
+<p>
+  To use the effect, add the corresponding class name to your HTML element(s). The corresponding
+  class name is always the effect name prefixed with <code>font-effect-</code>, so the class name
+  for <code>shadow-multiple</code> would be <code>font-effect-shadow-multiple</code>:
+</p>
+
+<pre>&lt;div class="font-effect-shadow-multiple"&gt;This is a font effect!&lt;div&gt;</pre>
+
+<p>
+  You can request multiple effects by separating the effect names with a pipe character
+  (<code>|</code>).
+</p>
+
+<pre>http://fonts.googleapis.com/css?family=Rancho&amp;effect=shadow-multiple|3d-float</pre>
+
+<p>
+  Here is a complete listing of all the font effects that we offer:
+</p>
+<style>
+  .effects-table td:first-child {
+    font-family: Source Sans Pro;
+    font-size: 40px;
+    font-weight: 900;
+    background-color: #eee;
+  }
+</style>
+<table class="effects-table">
+  <tr>
+    <th>Effect</th>
+    <th>API Name</th>
+    <th>Class Name</th>
+    <th>Support</th>
+  </tr>
+  <tr>
+    <td><span class="font-effect-anaglyph">Anaglyph</span></td>
+    <td><code>anaglyph</code></td>
+    <td><code>font-effect-anaglyph</code></td>
+    <td>Chrome, Firefox, Opera, Safari</td>
+  </tr>
+  <tr>
+    <td><span class="font-effect-brick-sign">Brick Sign</span></td>
+    <td><code>brick-sign</code></td>
+    <td><code>font-effect-brick-sign</code></td>
+    <td>Chrome, Safari</td>
+  </tr>
+  <tr>
+    <td><span class="font-effect-canvas-print">Canvas Print</span></td>
+    <td><code>canvas-print</code></td>
+    <td><code>font-effect-canvas-print</code></td>
+    <td>Chrome, Safari</td>
+  </tr>
+  <tr>
+    <td><span class="font-effect-crackle">Crackle</span></td>
+    <td><code>crackle</code></td>
+    <td><code>font-effect-crackle</code></td>
+    <td>Chrome, Safari</td>
+  </tr>
+  <tr>
+    <td><span class="font-effect-decaying">Decaying</span></td>
+    <td><code>decaying</code></td>
+    <td><code>font-effect-decaying</code></td>
+    <td>Chrome, Safari</td>
+  </tr>
+  <tr>
+    <td><span class="font-effect-destruction">Destruction</span></td>
+    <td><code>destruction</code></td>
+    <td><code>font-effect-destruction</code></td>
+    <td>Chrome, Safari</td>
+  </tr>
+  <tr>
+    <td><span class="font-effect-distressed">Distressed</span></td>
+    <td><code>distressed</code></td>
+    <td><code>font-effect-distressed</code></td>
+    <td>Chrome, Safari</td>
+  </tr>
+  <tr>
+    <td><span class="font-effect-distressed-wood">Distressed Wood</span></td>
+    <td><code>distressed-wood</code></td>
+    <td><code>font-effect-distressed-wood</code></td>
+    <td>Chrome, Safari</td>
+  </tr>
+  <tr>
+    <td><span class="font-effect-emboss">Emboss</span></td>
+    <td><code>emboss</code></td>
+    <td><code>font-effect-emboss</code></td>
+    <td>Chrome, Firefox, Opera, Safari</td>
+  </tr>
+  <tr>
+    <td><span class="font-effect-fire">Fire</span></td>
+    <td><code>fire</code></td>
+    <td><code>font-effect-fire</code></td>
+    <td>Chrome, Firefox, Opera, Safari</td>
+  </tr>
+  <tr>
+    <td><span class="font-effect-fire-animation">Fire Animation</span></td>
+    <td><code>fire-animation</code></td>
+    <td><code>font-effect-fire-animation</code></td>
+    <td>Chrome, Firefox, Opera, Safari</td>
+  </tr>
+  <tr>
+    <td><span class="font-effect-fragile">Fragile</span></td>
+    <td><code>fragile</code></td>
+    <td><code>font-effect-fragile</code></td>
+    <td>Chrome, Safari</td>
+  </tr>
+  <tr>
+    <td><span class="font-effect-grass">Grass</span></td>
+    <td><code>grass</code></td>
+    <td><code>font-effect-grass</code></td>
+    <td>Chrome, Safari</td>
+  </tr>
+  <tr>
+    <td><span class="font-effect-ice">Ice</span></td>
+    <td><code>ice</code></td>
+    <td><code>font-effect-ice</code></td>
+    <td>Chrome, Safari</td>
+  </tr>
+  <tr>
+    <td><span class="font-effect-mitosis">Mitosis</span></td>
+    <td><code>mitosis</code></td>
+    <td><code>font-effect-mitosis</code></td>
+    <td>Chrome, Safari</td>
+  </tr>
+  <tr>
+    <td><span class="font-effect-neon">Neon</span></td>
+    <td><code>neon</code></td>
+    <td><code>font-effect-neon</code></td>
+    <td>Chrome, Firefox, Opera, Safari</td>
+  </tr>
+  <tr>
+    <td><span class="font-effect-outline">Outline</span></td>
+    <td><code>outline</code></td>
+    <td><code>font-effect-outline</code></td>
+    <td>Chrome, Firefox, Opera, Safari</td>
+  </tr>
+  <tr>
+    <td><span class="font-effect-putting-green">Putting Green</span></td>
+    <td><code>putting-green</code></td>
+    <td><code>font-effect-putting-green</code></td>
+    <td>Chrome, Safari</td>
+  </tr>
+  <tr>
+    <td><span class="font-effect-scuffed-steel">Scuffed Steel</span></td>
+    <td><code>scuffed-steel</code></td>
+    <td><code>font-effect-scuffed-steel</code></td>
+    <td>Chrome, Safari</td>
+  </tr>
+  <tr>
+    <td><span class="font-effect-shadow-multiple">Shadow Multiple</span></td>
+    <td><code>shadow-multiple</code></td>
+    <td><code>font-effect-shadow-multiple</code></td>
+    <td>Chrome, Firefox, Opera, Safari</td>
+  </tr>
+  <tr>
+    <td><span class="font-effect-splintered">Splintered</span></td>
+    <td><code>splintered</code></td>
+    <td><code>font-effect-splintered</code></td>
+    <td>Chrome, Safari</td>
+  </tr>
+  <tr>
+    <td><span class="font-effect-static">Static</span></td>
+    <td><code>static</code></td>
+    <td><code>font-effect-static</code></td>
+    <td>Chrome, Safari</td>
+  </tr>
+  <tr>
+    <td><span class="font-effect-stonewash">Stonewash</span></td>
+    <td><code>stonewash</code></td>
+    <td><code>font-effect-stonewash</code></td>
+    <td>Chrome, Safari</td>
+  </tr>
+  <tr>
+    <td><span class="font-effect-3d">Three Dimensional</span></td>
+    <td><code>3d</code></td>
+    <td><code>font-effect-3d</code></td>
+    <td>Chrome, Firefox, Opera, Safari</td>
+  </tr>
+  <tr>
+    <td><span class="font-effect-3d-float">Three Dimensional Float</span></td>
+    <td><code>3d-float</code></td>
+    <td><code>font-effect-3d-float</code></td>
+    <td>Chrome, Firefox, Opera, Safari</td>
+  </tr>
+  <tr>
+    <td><span class="font-effect-vintage">Vintage</span></td>
+    <td><code>vintage</code></td>
+    <td><code>font-effect-vintage</code></td>
+    <td>Chrome, Safari</td>
+  </tr>
+  <tr>
+    <td><span class="font-effect-wallpaper">Wallpaper</span></td>
+    <td><code>wallpaper</code></td>
+    <td><code>font-effect-wallpaper</code></td>
+    <td>Chrome, Safari</td>
+  </tr>
+</table>
+
+<p>
+  Note: Some of the font effects (e.g. 3d) do not scale particularly well, and
+  tend to look best when used with larger font sizes.  Additionally, you might
+  want to style the fonts further, such as changing the color of the text to match your page.
+</p>
+
+<p>
+  There are many more ways to style your fonts, and many things are possible through CSS.
+  We are simply providing a few ideas to get you started. For more ideas, try
+  Google searching "<a href="https://www.google.com/search?q=css+text+effects" target="_blank">css text effects</a>" and browse through many of the ideas that are already on the web!
+</p>
+
+<h2 id="Further_Reading">Further reading</h2>
+<ul>
+  <li>See a complete list of font families provided by the Google Fonts API on <a href="http://www.google.com/fonts">Google Fonts</a>.</li>
+  <li>Learn how to use the <a href="/fonts/docs/webfont_loader">WebFont Loader</a> to have more control over loading fonts.</li>
+  <li>Learn more about how the Google Fonts API works on the <a href="/fonts/docs/technical_considerations">Technical Considerations</a> page.</li>
+</ul>
+
+  
+  </div>
+
+  
+        </div>
+        
+<div id="gc-content-footer">
+
+
+
+<div itemprop="datePublished" content="2013-04-09T18:06:10.310690" id="gc-content-last-updated">Last updated April 9, 2013.</div>
+
+</div>
+
+
+
+
+      </div>
+  
+
+        
+      </div>
+        
+      
+
+      
+      
+      <footer id="gc-footer">
+        <div id="gc-copyright">
+          <a href="/">
+            <img id="developers-logo-footer" src="/_static/images/developers-logo-footer.png" alt="Google Developers logo" style="vertical-align: center; float: left"/>
+          </a>
+          <ul>
+            <li><a href="http://www.google.com/">Google</a></li>
+            <li><a href="/readme/terms">Terms of Service</a></li>
+            <li><a href="http://www.google.com/intl/en/privacy/">Privacy Policy</a></li>
+            <li><a href="/jobs">Jobs</a></li>
+            <li><a class="google-feedback" data-p="81425" data-b="Documentation"  data-v="devsite-20130430-rc10.default" href="">Report a bug</a></li>
+          </ul>
+        </div>
+        
+        <div id="gc-language">
+          <ul>
+            <li>
+              <form id="setlang" action="/i18n/setlang/" method="post">
+                <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='5498131969a24e29708eec8f861810ad' /></div>
+                <select id="footer_language" name="language">
+                  
+                  
+                  <option
+                     value="ar"
+                     >
+                    العربيّة
+                  </option>
+                  
+                  <option
+                     value="bg"
+                     >
+                    български
+                  </option>
+                  
+                  <option
+                     value="ca"
+                     >
+                    català
+                  </option>
+                  
+                  <option
+                     value="zh-cn"
+                     >
+                    简体中文
+                  </option>
+                  
+                  <option
+                     value="zh-tw"
+                     >
+                    繁體中文
+                  </option>
+                  
+                  <option
+                     value="hr"
+                     >
+                    Hrvatski
+                  </option>
+                  
+                  <option
+                     value="cs"
+                     >
+                    česky
+                  </option>
+                  
+                  <option
+                     value="da"
+                     >
+                    Dansk
+                  </option>
+                  
+                  <option
+                     value="nl"
+                     >
+                    Nederlands
+                  </option>
+                  
+                  <option
+                     value="en"
+                      selected="selected" >
+                    English
+                  </option>
+                  
+                  <option
+                     value="fa"
+                     >
+                    فارسی
+                  </option>
+                  
+                  <option
+                     value="fi"
+                     >
+                    suomi
+                  </option>
+                  
+                  <option
+                     value="fr"
+                     >
+                    Français
+                  </option>
+                  
+                  <option
+                     value="de"
+                     >
+                    Deutsch
+                  </option>
+                  
+                  <option
+                     value="el"
+                     >
+                    Ελληνικά
+                  </option>
+                  
+                  <option
+                     value="he"
+                     >
+                    עברית
+                  </option>
+                  
+                  <option
+                     value="hi"
+                     >
+                    Hindi
+                  </option>
+                  
+                  <option
+                     value="hu"
+                     >
+                    Magyar
+                  </option>
+                  
+                  <option
+                     value="id"
+                     >
+                    Bahasa Indonesia
+                  </option>
+                  
+                  <option
+                     value="it"
+                     >
+                    italiano
+                  </option>
+                  
+                  <option
+                     value="ja"
+                     >
+                    日本語
+                  </option>
+                  
+                  <option
+                     value="ko"
+                     >
+                    한국어
+                  </option>
+                  
+                  <option
+                     value="lv"
+                     >
+                    latviešu
+                  </option>
+                  
+                  <option
+                     value="lt"
+                     >
+                    Lithuanian
+                  </option>
+                  
+                  <option
+                     value="nb"
+                     >
+                    Norsk (bokmål)
+                  </option>
+                  
+                  <option
+                     value="nn"
+                     >
+                    Norsk (nynorsk)
+                  </option>
+                  
+                  <option
+                     value="pl"
+                     >
+                    polski
+                  </option>
+                  
+                  <option
+                     value="pt-br"
+                     >
+                    Português Brasileiro
+                  </option>
+                  
+                  <option
+                     value="pt"
+                     >
+                    Português
+                  </option>
+                  
+                  <option
+                     value="ro"
+                     >
+                    Română
+                  </option>
+                  
+                  <option
+                     value="ru"
+                     >
+                    Русский
+                  </option>
+                  
+                  <option
+                     value="sr"
+                     >
+                    српски
+                  </option>
+                  
+                  <option
+                     value="sk"
+                     >
+                    slovenský
+                  </option>
+                  
+                  <option
+                     value="sl"
+                     >
+                    Slovenščina
+                  </option>
+                  
+                  <option
+                     value="es"
+                     >
+                    español
+                  </option>
+                  
+                  <option
+                     value="sv"
+                     >
+                    Svenska
+                  </option>
+                  
+                  <option
+                     value="th"
+                     >
+                    Thai
+                  </option>
+                  
+                  <option
+                     value="tr"
+                     >
+                    Türkçe
+                  </option>
+                  
+                  <option
+                     value="uk"
+                     >
+                    Українська
+                  </option>
+                  
+                  <option
+                     value="vi"
+                     >
+                    Vietnamese
+                  </option>
+                  
+                </select>
+              </form>
+            </li>
+          </ul>
+        </div>
+        
+      </footer>
+      
+      
+    </div>
+    <div id="needAuth" class="msgDialogContent">
+      
+      <h1>Authentication required</h1>
+      
+      <div>
+        You need to be signed in with <a href='http://www.google.com/+'>Google+</a> to do that.
+      </div>
+      <button>Sign in</button>
+      <button>Cancel</button>
+    </div>
+    <div id="signingIn" class="msgDialogContent">
+      
+      <h1>Signing you in...</h1>
+      <div>
+        
+        Google Developers needs your permission to do that.
+      </div>
+      
+      <button>Try again</button>
+      
+      <button>Cancel</button>
+    </div>
+    <script src="/_static/js/script_foot.js"></script>
+    <script>
+      (function($) {
+        devsite.devsite.Init($, null, '');
+      })(jQuery);
+
+      
+      devsite.localInit = function() {
+        
+      };
+      
+    </script>
+    <!-- Google Code for PXL - Developers - Codesite - HP - 90d Remarketing List -->
+    <script type="text/javascript">
+    $('#setlang select').each(function() {
+      if ($.browser.msie) {
+        $(this).change(function() {
+          $('#setlang').submit();
+        });
+      } else {
+        $(this).kdSelect({'change': function() {
+          $('#setlang').submit();
+        }});
+      }
+    });
+    </script>
+    <script type="text/javascript">
+      /* <![CDATA[ */
+      var google_conversion_id = 992540712;
+      var google_conversion_language = "en";
+      var google_conversion_format = "3";
+      var google_conversion_color = "ffffff";
+      var google_conversion_label = "qio2CKCPwQMQqPCj2QM";
+      var google_conversion_value = 0;
+      /* ]]> */
+    </script>
+    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+    </script>
+
+    
+
+    <script>
+      
+      google.load('visualization', '1', {packages: ['table']});
+    </script>
+
+    <noscript>
+      <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/992540712/?label=qio2CKCPwQMQqPCj2QM&amp;guid=ON&amp;script=0"/>
+      </div>
+    </noscript>
+    
+
+
+
+
+
+<script type="text/javascript">
+$(document).ready(function(e) {
+    // Render any carousels on the page
+    $('.carousel').carousel();
+    // Render any feed widgets on the page
+    
+    $('.feed').rss();
+    $('.feed-plain').rss();
+    // Render any OSS widgets on the page.
+    $('.oss').oss();
+    });
+</script>
+
+<script type="text/javascript" defer>
+
+
+$(document).ready(function() {
+    contentTimer.name = 'content';
+    contentTimer.tick('ol');
+    window.jstiming.report(contentTimer);
+
+    // Boilerplate javascript to enable the plusone button
+    var po = document.createElement('script'); po.type = 'text/javascript';
+    po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js?onload=devsite_plusoneLoaded';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(po, s);
+});
+</script>
+
+
+
+
+
+  </body>
+
+  
+</html>
