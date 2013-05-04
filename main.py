@@ -17,26 +17,16 @@ import jinja2
 from udacity.ROT13.main import RotHandler, PreviousEntries
 from udacity.signup.main import SignupHandler, ThanksHandler
 from udacity.blog.main import BlogPage, EntryPage, PermalinkPage, EditPage
-from facebook_apps.fb_yt import fb
-from facebook_apps.fb_yt import ViewNewsFeed
-from GAE_tutorial import MainPage, Guestbook, Channel
+from udacity.blog.object_models import BaseHandler
+from fb_yt import ViewNewsFeed, fb
+from gae.GAE_tutorial import MainPage, Guestbook, Channel
+from youtube_auth import YtPage 
 
 template_dir = os.path.join(os.path.dirname(__file__), 'templates')
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir),
                                autoescape=True)
 
 
-def render_str(template, **params):
-    t = jinja_env.get_template(template)
-    return t.render(params)
-
-
-class BaseHandler(webapp2.RequestHandler):
-    def render(self, template, **kw):
-        self.response.out.write(render_str(template, **kw))
-
-    def write(self, *a, **kw):
-        self.response.out.write(*a, **kw)
 
 class Home(BaseHandler):
       def get(self): 
@@ -71,6 +61,7 @@ app = webapp2.WSGIApplication([('/', Home),
                                (r'/udacity/blog/(\d+)', PermalinkPage),
                                (r'/udacity/blog/edit/(\d+)', EditPage),
                                ('/udacity/blog', BlogPage),
+                               ('/udacity/youtube', YtPage),
                                ('/udacity/blog/', BlogPage),
                                ('/udacity/rot13', RotHandler),
                                ('/udacity/signup', SignupHandler),
