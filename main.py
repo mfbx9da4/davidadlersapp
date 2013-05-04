@@ -46,7 +46,7 @@ class Home(BaseHandler):
 def stripOutRouteStrings(routes):
       strs = []
       for r in routes:
-            strs.append(re.findall('/[a-zA-Z/0-9]*', r.template)[0])
+            strs.append(re.findall('/[a-zA-Z/0-9.]*', r.template)[0])
       return strs
 
 class Wiki(BaseHandler):
