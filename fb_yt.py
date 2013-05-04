@@ -21,14 +21,15 @@ class ViewNewsFeed(webapp2.RequestHandler):
     def post(self):
         token = self.request.get('q')
         nf = NewsFeed(token)
-        vid_list = nf.getNewsFeedVideosPage(10)
-        self.response.write(vid_list)
-        # html = ''
-        # for x in vid_list:
-        #     a = '<iframe id="ytplayer" type="text/html" width="640" height="360" src="%s" frameborder="0" allowfullscreen><br>' % x
-        #     html += a
-        # self.response.write(html)
+        vid_list = nf.getNewsFeedVideosPage(20)
+        html = ''
+        for x in vid_list:
+            a = '<iframe id="ytplayer" type="text/html" width="640" height="360" src="%s" frameborder="0" allowfullscreen><br>' % x
+            html += a
+        self.response.write(html)
     
     def get(self):
         a = '<iframe id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/Zhawgd0REhA" frameborder="0" allowfullscreen>'
         self.response.write(a)
+
+
