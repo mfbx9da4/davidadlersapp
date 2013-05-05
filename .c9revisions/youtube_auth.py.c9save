@@ -1,0 +1,63 @@
+{"ts":1367757995223,"silentsave":true,"restoring":false,"patch":[[{"diffs":[[1,"from udacity.blog.object_models import BaseHandler\nfrom session import SessionHandler\n\nclass YtPage(BaseHandler, SessionHandler):\n\tdef get(self):\n\t\tif self.request.get('error') == 'access_denied' :\n \t\t\tself.session['error'] = 'access_denied'\n\t\t\treturn self.redirect(self.session.get('link'))\n\t\telse:\n \t\t\tself.session['code'] = self.request.get('code')\n\t\t\treturn self.redirect(self.session.get('link'))\n \tdef post(self):\n\t\tself.response.write(\"ok\")\n\nclass YtAuthPage(BaseHandler):\n     \tdef get(self):\n         \treturn self.redirect( 'https://accounts.google.com/o/oauth2/auth?client_id=788984753858.apps.googleusercontent.com&redirect_uri=http://davidadlersapp.appspot.com/yt_handler&scope=https://www.googleapis.com/auth/youtube&response_type=code&access_type=offline')\n \n\t \t\t\n"]],"start1":0,"start2":0,"length1":0,"length2":778}]],"length":778}
+{"contributors":[],"silentsave":true,"ts":1367758861987,"patch":[[{"diffs":[[0,"e')\n"],[-1," \n\t \t\t\n"]],"start1":767,"start2":767,"length1":11,"length2":4}]],"length":771,"saved":false}
+{"ts":1367758863216,"patch":[[{"diffs":[[0,"e=offline')\n"],[1," \n\n"]],"start1":759,"start2":759,"length1":12,"length2":15}]],"length":774,"saved":false}
+{"ts":1367758866265,"patch":[[{"diffs":[[0,"fline')\n"],[1,"String AUTH_URL = \"https://accounts.google.com/o/oauth2/auth\";\nString CLIENT_ID = \"YOUR_CLIENT_ID\"; // available from the APIs console\nString BUZZ_READONLY_SCOPE = \"https://www.googleapis.com/auth/buzz.readonly\";\nString BUZZ_PHOTOS_SCOPE = \"https://www.googleapis.com/auth/photos\";"],[0," \n\n"]],"start1":763,"start2":763,"length1":11,"length2":292}]],"length":1055,"saved":false}
+{"ts":1367758871672,"patch":[[{"diffs":[[0,"fline')\n"],[1,"\n"],[0,"String A"]],"start1":763,"start2":763,"length1":16,"length2":17}]],"length":1056,"saved":false}
+{"ts":1367758886156,"patch":[[{"diffs":[[0,"NT_ID\"; "],[-1,"//"],[0," availab"]],"start1":864,"start2":864,"length1":18,"length2":16}]],"length":1054,"saved":false}
+{"ts":1367758887536,"patch":[[{"diffs":[[0,"NT_ID\"; "],[1,"#"],[0," availab"]],"start1":864,"start2":864,"length1":16,"length2":17}]],"length":1055,"saved":false}
+{"ts":1367758893631,"patch":[[{"diffs":[[0,"line')\n\n"],[-1,"String "],[0,"AUTH_URL"]],"start1":764,"start2":764,"length1":23,"length2":16}]],"length":1048,"saved":false}
+{"ts":1367758896400,"patch":[[{"diffs":[[0,"/auth\";\n"],[-1,"String "],[0,"CLIENT_I"]],"start1":820,"start2":820,"length1":23,"length2":16}]],"length":1041,"saved":false}
+{"ts":1367758898213,"patch":[[{"diffs":[[0,"console\n"],[-1,"String "],[0,"BUZZ_REA"]],"start1":884,"start2":884,"length1":23,"length2":16}]],"length":1034,"saved":false}
+{"ts":1367758899661,"patch":[[{"diffs":[[0,"y\";\n"],[-1,"String "],[0,"BUZZ"]],"start1":959,"start2":959,"length1":15,"length2":8}]],"length":1027,"saved":false}
+{"ts":1367759031696,"patch":[[{"diffs":[[0,"ent.com&"],[1,"\n             "],[0,"redirect"]],"start1":618,"start2":618,"length1":16,"length2":30}]],"length":1041,"saved":false}
+{"ts":1367759037273,"patch":[[{"diffs":[[0,"com&"],[-1,"\n             "],[0,"redi"]],"start1":622,"start2":622,"length1":22,"length2":8}]],"length":1027,"saved":false}
+{"ts":1367759038196,"patch":[[{"diffs":[[0,"tent.com"],[1,"\n             "],[0,"&redirec"]],"start1":617,"start2":617,"length1":16,"length2":30}]],"length":1041,"saved":false}
+{"ts":1367759041797,"patch":[[{"diffs":[[0,"_handler"],[1,"\n             "],[0,"&scope=h"]],"start1":689,"start2":689,"length1":16,"length2":30}]],"length":1055,"saved":false}
+{"ts":1367759047757,"patch":[[{"diffs":[[0,"ype=code"],[1,"\n             "],[0,"&access_"]],"start1":768,"start2":768,"length1":16,"length2":30}]],"length":1069,"saved":false}
+{"ts":1367759072113,"patch":[[{"diffs":[[0,"irect( '"],[1,"\n             "],[0,"https://"]],"start1":526,"start2":526,"length1":16,"length2":30}]],"length":1083,"saved":false}
+{"ts":1367759084718,"patch":[[{"diffs":[[0,"th2/auth"],[1,"\n             "],[0,"?client_"]],"start1":581,"start2":581,"length1":16,"length2":30}]],"length":1097,"saved":false}
+{"ts":1367759090962,"patch":[[{"diffs":[[0,"edirect("],[-1," '"],[0,"\n       "]],"start1":524,"start2":524,"length1":18,"length2":16}]],"length":1095,"saved":false}
+{"ts":1367759093927,"patch":[[{"diffs":[[0,"offline'"],[-1,")"],[0,"\n\nAUTH_U"]],"start1":829,"start2":829,"length1":17,"length2":16}]],"length":1094,"saved":false}
+{"ts":1367759097378,"patch":[[{"diffs":[[0,"f):\n"],[-1,"         \treturn self.redirect(\n"],[0,"    "]],"start1":497,"start2":497,"length1":40,"length2":8},{"diffs":[[0,"offline'"],[1,"\n         \treturn self.redirect("],[0,"\n\nAUTH_U"]],"start1":797,"start2":797,"length1":16,"length2":48}]],"length":1094,"saved":false}
+{"ts":1367759103236,"patch":[[{"diffs":[[0,"        "],[1,"auth"],[0,"https://"]],"start1":506,"start2":506,"length1":16,"length2":20}]],"length":1098,"saved":false}
+{"ts":1367759104445,"patch":[[{"diffs":[[0,"    auth"],[1,"_ur"],[0,"https://"]],"start1":510,"start2":510,"length1":16,"length2":19}]],"length":1101,"saved":false}
+{"ts":1367759106058,"patch":[[{"diffs":[[0," auth_ur"],[1,"l = "],[0,"https://"]],"start1":513,"start2":513,"length1":16,"length2":20}]],"length":1105,"saved":false}
+{"ts":1367759107814,"patch":[[{"diffs":[[0,"h_url = "],[1,"'"],[0,"https://"]],"start1":517,"start2":517,"length1":16,"length2":17}]],"length":1106,"saved":false}
+{"ts":1367759110467,"patch":[[{"diffs":[[0,"th2/auth"],[1,"'"],[0,"\n       "]],"start1":559,"start2":559,"length1":16,"length2":17}]],"length":1107,"saved":false}
+{"ts":1367759112332,"patch":[[{"diffs":[[0,"tent.com"],[1,"'"],[0,"\n       "]],"start1":624,"start2":624,"length1":16,"length2":17}]],"length":1108,"saved":false}
+{"ts":1367759115013,"patch":[[{"diffs":[[0,"        "],[1,"'"],[0,"?client_"]],"start1":574,"start2":574,"length1":16,"length2":17}]],"length":1109,"saved":false}
+{"ts":1367759118117,"patch":[[{"diffs":[[0,"        "],[1,"clien"],[0,"'?client"]],"start1":574,"start2":574,"length1":16,"length2":21}]],"length":1114,"saved":false}
+{"ts":1367759119119,"patch":[[{"diffs":[[0,"   clien"],[1,"d"],[0,"'?client"]],"start1":579,"start2":579,"length1":16,"length2":17}]],"length":1115,"saved":false}
+{"ts":1367759120643,"patch":[[{"diffs":[[0,"  cliend"],[1,"_id"],[0,"'?client"]],"start1":580,"start2":580,"length1":16,"length2":19}]],"length":1118,"saved":false}
+{"ts":1367759122323,"patch":[[{"diffs":[[0,"liend_id"],[1," = "],[0,"'?client"]],"start1":583,"start2":583,"length1":16,"length2":19}]],"length":1121,"saved":false}
+{"ts":1367759129684,"patch":[[{"diffs":[[0,"        "],[1,"redirect"],[0,"&redirec"]],"start1":652,"start2":652,"length1":16,"length2":24}]],"length":1129,"saved":false}
+{"ts":1367759132834,"patch":[[{"diffs":[[0,"redirect"],[1,"_uri = "],[0,"&redirec"]],"start1":660,"start2":660,"length1":16,"length2":23}]],"length":1136,"saved":false}
+{"ts":1367759135092,"patch":[[{"diffs":[[0,"t_uri = "],[1,"'"],[0,"&redirec"]],"start1":667,"start2":667,"length1":16,"length2":17}]],"length":1137,"saved":false}
+{"ts":1367759138946,"patch":[[{"diffs":[[0,"_handler"],[1,"'"],[0,"\n       "]],"start1":726,"start2":726,"length1":16,"length2":17}]],"length":1138,"saved":false}
+{"ts":1367759140401,"patch":[[{"diffs":[[0,"ype=code"],[1,"'"],[0,"\n       "]],"start1":806,"start2":806,"length1":16,"length2":17}]],"length":1139,"saved":false}
+{"ts":1367759142867,"patch":[[{"diffs":[[0,"        "],[1,"'"],[0,"&scope=h"]],"start1":741,"start2":741,"length1":16,"length2":17}]],"length":1140,"saved":false}
+{"ts":1367759145503,"patch":[[{"diffs":[[0,"        "],[1,"'"],[0,"&access_"]],"start1":822,"start2":822,"length1":16,"length2":17}]],"length":1141,"saved":false}
+{"ts":1367759149613,"patch":[[{"diffs":[[0,"        "],[1,"scope "],[0,"'&scope="]],"start1":741,"start2":741,"length1":16,"length2":22}]],"length":1147,"saved":false}
+{"ts":1367759150700,"patch":[[{"diffs":[[0,"   scope"],[1," ="],[0," '&scope"]],"start1":746,"start2":746,"length1":16,"length2":18}]],"length":1149,"saved":false}
+{"ts":1367759154482,"patch":[[{"diffs":[[0,"        "],[1,"access"],[0,"'&access"]],"start1":830,"start2":830,"length1":16,"length2":22}]],"length":1155,"saved":false}
+{"ts":1367759156492,"patch":[[{"diffs":[[0,"  access"],[1,"_type"],[0,"'&access"]],"start1":836,"start2":836,"length1":16,"length2":21}]],"length":1160,"saved":false}
+{"ts":1367759158173,"patch":[[{"diffs":[[0,"ess_type"],[1," = "],[0,"'&access"]],"start1":841,"start2":841,"length1":16,"length2":19}]],"length":1163,"saved":false}
+{"ts":1367759165061,"patch":[[{"diffs":[[0,"        "],[-1," "],[0,"scope = "]],"start1":740,"start2":740,"length1":17,"length2":16},{"diffs":[[0,"e=code'\n"],[-1," "],[0,"        "]],"start1":816,"start2":816,"length1":17,"length2":16}]],"length":1161,"saved":false}
+{"ts":1367759165882,"patch":[[{"diffs":[[0,"        "],[-1," "],[0,"redirect"]],"start1":651,"start2":651,"length1":17,"length2":16}]],"length":1160,"saved":false}
+{"ts":1367759166610,"patch":[[{"diffs":[[0,"        "],[-1," "],[0,"cliend_i"]],"start1":573,"start2":573,"length1":17,"length2":16}]],"length":1159,"saved":false}
+{"ts":1367759167292,"patch":[[{"diffs":[[0,"        "],[-1," "],[0,"auth_url"]],"start1":505,"start2":505,"length1":17,"length2":16}]],"length":1158,"saved":false}
+{"ts":1367759174258,"patch":[[{"diffs":[[0,"edirect("],[1,"auth"],[0,"\n\nAUTH_U"]],"start1":893,"start2":893,"length1":16,"length2":20}]],"length":1162,"saved":false}
+{"ts":1367759175757,"patch":[[{"diffs":[[0,"ect(auth"],[1,"_url"],[0,"\n\nAUTH_U"]],"start1":897,"start2":897,"length1":16,"length2":20}]],"length":1166,"saved":false}
+{"ts":1367759177911,"patch":[[{"diffs":[[0,"auth_url"],[1," + a"],[0,"\n\nAUTH_U"]],"start1":901,"start2":901,"length1":16,"length2":20}]],"length":1170,"saved":false}
+{"ts":1367759178979,"patch":[[{"diffs":[[0,"h_url + "],[-1,"a"],[0,"\n\nAUTH_U"]],"start1":904,"start2":904,"length1":17,"length2":16}]],"length":1169,"saved":false}
+{"ts":1367759183955,"patch":[[{"diffs":[[0,"   clien"],[-1,"d"],[1,"t"],[0,"_id = '?"]],"start1":577,"start2":577,"length1":17,"length2":17}]],"length":1169,"saved":false}
+{"ts":1367759187189,"patch":[[{"diffs":[[0,"h_url + "],[1,"client"],[0,"\n\nAUTH_U"]],"start1":904,"start2":904,"length1":16,"length2":22}]],"length":1175,"saved":false}
+{"ts":1367759188444,"patch":[[{"diffs":[[0,"+ client"],[1,"_id"],[0,"\n\nAUTH_U"]],"start1":910,"start2":910,"length1":16,"length2":19}]],"length":1178,"saved":false}
+{"ts":1367759191217,"patch":[[{"diffs":[[0,"lient_id"],[1," + "],[0,"\n\nAUTH_U"]],"start1":913,"start2":913,"length1":16,"length2":19}]],"length":1181,"saved":false}
+{"ts":1367759194548,"patch":[[{"diffs":[[0,"nt_id + "],[1,"redirect"],[0,"\n\nAUTH_U"]],"start1":916,"start2":916,"length1":16,"length2":24}]],"length":1189,"saved":false}
+{"ts":1367759196794,"patch":[[{"diffs":[[0,"redirect"],[1,"_uri"],[0,"\n\nAUTH_U"]],"start1":924,"start2":924,"length1":16,"length2":20}]],"length":1193,"saved":false}
+{"ts":1367759198280,"patch":[[{"diffs":[[0,"rect_uri"],[1," + "],[0,"\n\nAUTH_U"]],"start1":928,"start2":928,"length1":16,"length2":19}]],"length":1196,"saved":false}
+{"ts":1367759199925,"patch":[[{"diffs":[[0,"t_uri + "],[1,"scope "],[0,"\n\nAUTH_U"]],"start1":931,"start2":931,"length1":16,"length2":22}]],"length":1202,"saved":false}
+{"ts":1367759202614,"patch":[[{"diffs":[[0,"+ scope "],[1,"+ access"],[0,"\n\nAUTH_U"]],"start1":937,"start2":937,"length1":16,"length2":24}]],"length":1210,"saved":false}
+{"ts":1367759204257,"patch":[[{"diffs":[[0,"+ access"],[1,"_type"],[0,"\n\nAUTH_U"]],"start1":945,"start2":945,"length1":16,"length2":21}]],"length":1215,"saved":false}
+{"ts":1367759483239,"patch":[[{"diffs":[[0,"th2/auth"],[1,"?"],[0,"'\n      "]],"start1":558,"start2":558,"length1":16,"length2":17},{"diffs":[[0,"t_id = '"],[-1,"?"],[0,"client_i"]],"start1":586,"start2":586,"length1":17,"length2":16},{"diffs":[[0,"'&scope=http"],[-1,"s"],[0,"://www.googl"]],"start1":753,"start2":753,"length1":25,"length2":24},{"diffs":[[0,"/youtube"],[1,"'\n            response_type = '"],[0,"&respons"]],"start1":791,"start2":791,"length1":16,"length2":47},{"diffs":[[0,"e + "],[-1,"access_type\n\nAUTH_URL = \"https://accounts.google.com/o/oauth2/auth\";\nCLIENT_ID = \"YOUR_CLIENT_ID\"; # available from the APIs console\nBUZZ_READONLY_SCOPE = \"https://www.googleapis.com/auth/buzz.readonly\";\nBUZZ_PHOTOS_SCOPE = \"https://www.googleapis.com/auth/photos\"; "],[1,"response_type + access_type)\n\n"],[0,"\n\n"]],"start1":973,"start2":973,"length1":272,"length2":36}]],"length":1009,"saved":false}

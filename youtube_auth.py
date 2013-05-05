@@ -14,6 +14,13 @@ class YtPage(BaseHandler, SessionHandler):
 
 class YtAuthPage(BaseHandler):
      	def get(self):
-         	return self.redirect( 'https://accounts.google.com/o/oauth2/auth?client_id=788984753858.apps.googleusercontent.com&redirect_uri=http://davidadlersapp.appspot.com/yt_handler&scope=https://www.googleapis.com/auth/youtube&response_type=code&access_type=offline')
- 
-	 		
+            auth_url = 'https://accounts.google.com/o/oauth2/auth?'
+            client_id = 'client_id=788984753858.apps.googleusercontent.com'
+            redirect_uri = '&redirect_uri=http://davidadlersapp.appspot.com/yt_handler'
+            scope = '&scope=http://www.googleapis.com/auth/youtube'
+            response_type = '&response_type=code'
+            access_type = '&access_type=offline'
+         	return self.redirect(auth_url + client_id + redirect_uri + scope + response_type + access_type)
+
+
+
