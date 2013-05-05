@@ -21,6 +21,7 @@ from udacity.blog.object_models import BaseHandler
 from fb_yt import ViewNewsFeed, fb
 from gae.GAE_tutorial import MainPage, Guestbook, Channel
 from youtube_auth import YtPage 
+from youtube_auth import YtAuthPage 
 
 template_dir = os.path.join(os.path.dirname(__file__), 'templates')
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir),
@@ -47,7 +48,10 @@ class GDev(BaseHandler):
       def get(self): 
             self.render('gdev2.html')
     
-
+config = {}
+config['webapp2_extras.sessions'] = {
+    'secret_key': 'my-super-secret-key',
+}
 
 app = webapp2.WSGIApplication([('/', Home),
                                ('/gae', MainPage),
@@ -61,10 +65,13 @@ app = webapp2.WSGIApplication([('/', Home),
                                (r'/udacity/blog/(\d+)', PermalinkPage),
                                (r'/udacity/blog/edit/(\d+)', EditPage),
                                ('/udacity/blog', BlogPage),
-                               ('/yt_auth', YtPage),
+                               ('/yt_handler', YtPage),
+                               ('/yt_auth', YtAuthPage),
+                               ('/udacity/blog/', BlogPage),
                                ('/udacity/blog/', BlogPage),
                                ('/udacity/rot13', RotHandler),
                                ('/udacity/signup', SignupHandler),
                                ('/udacity/rot13/entries', PreviousEntries),
                                ('/fb',fb)],
-                              debug=True)
+                              debug=True, 
+ 				config=config)
