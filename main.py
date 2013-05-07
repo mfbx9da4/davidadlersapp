@@ -37,7 +37,7 @@ class Home(BaseHandler):
 def stripOutRouteStrings(routes):
       strs = []
       for r in routes:
-            strs.append(re.findall('/[a-zA-Z/0-9.]*', r.template)[0])
+            strs.append(re.findall('/[a-zA-Z/0-9._()]*', r.template)[0])
       return strs
 
 class Wiki(BaseHandler):
@@ -67,7 +67,6 @@ app = webapp2.WSGIApplication([('/', Home),
                                ('/udacity/blog', BlogPage),
                                ('/yt_handler', YtPage),
                                ('/yt_auth', YtAuthPage),
-                               ('/udacity/blog/', BlogPage),
                                ('/udacity/blog/', BlogPage),
                                ('/udacity/rot13', RotHandler),
                                ('/udacity/signup', SignupHandler),

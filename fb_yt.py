@@ -9,11 +9,13 @@ fbsecr = '244b438e67524756fcdaedb24a54e8c5'
 
 class fb(BaseHandler, SessionHandler):
     def get(self):
-        if self.session.get('code') == None :
+        # test if the token 'code' exists, if it doesn't then it ask youtube a
+        # a auth token
+        if not self.session.get('code'):
         	self.session['link'] = 'http://davidadlersapp.appspot.com/fb'
-		return self.redirect('yt_auth')
-	else:
-       		self.render('fb.html')
+		    return self.redirect('yt_auth')
+	    else:
+       	    self.render('fb.html')
 
 
 class ViewNewsFeed(BaseHandler):
