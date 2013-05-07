@@ -14,8 +14,8 @@ class fb(BaseHandler, SessionHandler):
         if not self.session.get('code'):
             self.session['link'] = 'http://davidadlersapp.appspot.com/fb'
             self.redirect('yt_auth')
-	    else:
-       	    self.render('fb.html')
+        else:
+            self.render('fb.html')
 
 
 class ViewNewsFeed(BaseHandler):
