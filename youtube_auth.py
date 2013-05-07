@@ -13,13 +13,15 @@ class YtPage(BaseHandler, SessionHandler):
                            scope=scope1,
                            redirect_uri=redirect_uri)
             self.session['credentials'] = flow.step2_exchange(self.request.get('code'))
-            
+
  	def post(self):
 		self.response.write("ok")
 
 # '/yt_auth'
 class YtAuthPage(BaseHandler):
      	def get(self):
+            redirect( flow.step1_get_authorize_url() )
+            # credentials = flow.step2_exchange(code)
             #auth_url = 'https://accounts.google.com/o/oauth2/auth?'
             client_id = '788984753858.apps.googleusercontent.com'
             redirect_uri = 'http://davidadlersapp.appspot.com/yt_handler'
@@ -33,5 +35,6 @@ class YtAuthPage(BaseHandler):
                            redirect_uri=redirect_uri)
             redirect( flow.step1_get_authorize_url() )
             # credentials = flow.step2_exchange(code)
+
 
 
