@@ -26,3 +26,8 @@
 {"ts":1367759888445,"patch":[[{"diffs":[[0,"A-Z/0-9."],[1,"_"],[0,"]*', r.t"]],"start1":1155,"start2":1155,"length1":16,"length2":17}]],"length":2721,"saved":false}
 {"ts":1367759916578,"patch":[[{"diffs":[[0,"-Z/0-9._"],[1,"()"],[0,"]*', r.t"]],"start1":1156,"start2":1156,"length1":16,"length2":18}]],"length":2723,"saved":false}
 {"ts":1367760091760,"patch":[[{"diffs":[[0,"e),\n"],[-1,"                               ('/udacity/blog/', BlogPage),\n"],[0,"    "]],"start1":2345,"start2":2345,"length1":69,"length2":8}]],"length":2662,"saved":false}
+{"contributors":[],"silentsave":true,"ts":1367947891544,"patch":[[{"diffs":[[0,", \n "],[-1,"\t\t\t\t"],[1,"                           "],[0,"conf"]],"start1":2639,"start2":2639,"length1":12,"length2":35}]],"length":2685,"saved":false}
+{"ts":1367947892448,"patch":[[{"diffs":[[0,"        "],[1,"    "],[0,"config=c"]],"start1":2662,"start2":2662,"length1":16,"length2":20}]],"length":2689,"saved":false}
+{"ts":1367947894425,"patch":[[{"diffs":[[0,"=True, \n"],[1,"                                \n"],[0,"        "]],"start1":2634,"start2":2634,"length1":16,"length2":49}]],"length":2722,"saved":false}
+{"ts":1367947902562,"patch":[[{"diffs":[[0,"e, \n"],[-1,"                                "],[0,"\n   "]],"start1":2638,"start2":2638,"length1":40,"length2":8}]],"length":2690,"saved":false}
+{"ts":1367947903525,"patch":[[{"diffs":[[0,"=True, \n"],[-1,"\n"],[0,"        "]],"start1":2634,"start2":2634,"length1":17,"length2":16}]],"length":2689,"saved":false}
