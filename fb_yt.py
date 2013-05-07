@@ -13,7 +13,7 @@ class fb(BaseHandler, SessionHandler):
         # a auth token
         if not self.session.get('code'):
         	self.session['link'] = 'http://davidadlersapp.appspot.com/fb'
-		    return self.redirect('yt_auth')
+		    self.redirect('yt_auth')
 	    else:
        	    self.render('fb.html')
 
