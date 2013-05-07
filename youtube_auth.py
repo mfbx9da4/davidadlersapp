@@ -29,10 +29,7 @@ class YtAuthPage(BaseHandler):
             #response_type = '&response_type=code'
             #access_type = '&access_type=offline'
          	#return self.redirect(auth_url + client_id + redirect_uri + scope + response_type + access_type)
-            flow = OAuth2WebServerFlow(client_id = client_id1,
-                           client_secret='your_client_secret',
-                           scope=scope1,
-                           redirect_uri=redirect_uri)
+            flow = OAuth2WebServerFlow(client_id = client_id1, client_secret='your_client_secret',scope=scope1,redirect_uri=redirect_uri)
             redirect( flow.step1_get_authorize_url() )
             # credentials = flow.step2_exchange(code)
 
