@@ -7,6 +7,7 @@ class YtPage(BaseHandler, SessionHandler):
     def get(self):
         if self.request.get('error') == 'access_denied':
             self.session['error'] = 'access_denied'
+            return self.redirect( self.session.get('link'))
         else:
             pass
 
