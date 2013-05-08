@@ -11,7 +11,7 @@ class fb(BaseHandler, SessionHandler):
     def get(self):
         # test if the token 'code' exists, if it doesn't then it ask youtube a
         # a auth token
-        if not self.session.get('code'):
+        if self.session.get('code') == None:
             self.session['link'] = 'http://davidadlersapp.appspot.com/fb'
             self.redirect('yt_auth')
         else:
