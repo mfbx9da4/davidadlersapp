@@ -4,15 +4,11 @@ from session import SessionHandler
 
 # '/yt_handler'
 class YtPage(BaseHandler, SessionHandler):
-	def get(self):
-		if self.request.get('error') == 'access_denied':
- 			self.session['error'] = 'access_denied'
-		else:
-            flow = OAuth2WebServerFlow(client_id = client_id,
-                           client_secret='your_client_secret',
-                           scope=scope1,
-                           redirect_uri=redirect_uri)
-            self.session['credentials'] = flow.step2_exchange(self.request.get('code'))
+    def get(self):
+        if self.request.get('error') == 'access_denied':
+            self.session['error'] = 'access_denied'
+        else:
+            pass
 
     def post(self):
         self.response.write("ok")
