@@ -16,11 +16,11 @@ class YtPage(BaseHandler, SessionHandler):
             http.host = 'accounts.google.com' 
             #http.path = '/o/oauth2/token'
             
-            code = 'code='+self.request.get('code')
+            code = 'code=' + self.request.get('code')
             client_id = '&client_id=788984753858.apps.googleusercontent.com'
             redirect_uri = '&redirect_uri=://davidadlersapp.appspot.com/viewnewsfeed'
             client_secret = '&client_secret=my-super-secret-key'
-            grant_type = '&grant_type=autorization_code'
+            grant_type = '&grant_type=autorization_code' 
             body = code + client_id + redirect_uri + client_secret + grant_type
             http.body = body.encode('ascii', 'ignore')            
 
