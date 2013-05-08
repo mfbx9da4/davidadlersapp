@@ -1,6 +1,6 @@
 from udacity.blog.object_models import BaseHandler
 from session import SessionHandler
-from oauth2client.client import OAuth2WebServerFlow
+
 
 # '/yt_handler'
 class YtPage(BaseHandler, SessionHandler):
