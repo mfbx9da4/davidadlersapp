@@ -19,9 +19,9 @@ class YtAuthPage(BaseHandler):
             #redirect( flow.step1_get_authorize_url() )
             #credentials = flow.step2_exchange(code)
             auth_url = 'https://accounts.google.com/o/oauth2/auth?'
-            client_id1 = '&client_id=788984753858.apps.googleusercontent.com'
+            client_id = '&client_id=788984753858.apps.googleusercontent.com'
             redirect_uri = '&redirect_uri=http://davidadlersapp.appspot.com/yt_handler'
-            scope1 = '&scope=http://www.googleapis.com/auth/youtube'
+            scope = '&scope=http://www.googleapis.com/auth/youtube'
             response_type = '&response_type=code'
             access_type = '&access_type=offline'
             return self.redirect(auth_url + client_id + redirect_uri + scope + response_type + access_type)
