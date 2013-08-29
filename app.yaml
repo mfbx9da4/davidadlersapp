@@ -6,9 +6,16 @@ threadsafe: true
 
 handlers:
 - url: /style
-  static_dir: style
+  static_dir: static/style
 - url: /images
-  static_dir: images
+  static_dir: static/images
+- url: /files
+  static_dir: static/files
+- url: /js
+  static_dir: static/js
+- url: /favicon\.ico
+  static_files: static/images/favicon.ico
+  upload: favicon\.ico
 
 - url: /.*
   script: main.app
