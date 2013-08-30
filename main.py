@@ -42,7 +42,7 @@ class GDocs(BaseHandler):
 
 class ANGN(BaseHandler):
     def get(self): 
-        self.render('coming_soon.html')
+        self.render('angn.html')
 
 class PE(BaseHandler):
     def get(self): 
@@ -65,7 +65,7 @@ blog_routes = [('/blog', blog.BlogPage), ('/blog/newpost', blog.EntryPage),
     ('/blog/logout', signup.LogoutHandler),
     ('/blog/welcome', signup.ThanksHandler)]
 
-routes = [('/nav', Nav), ('/me', Me), ('/imperial', Imperial),
+routes = [('/nav', Nav), ('/', Me), ('/imperial', Imperial),
         ('/gdocs', GDocs), ('/angn', ANGN), ('/pe', PE),
         ('/rhythmludus', Rhythmludus)] + blog_routes
 
