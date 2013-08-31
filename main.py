@@ -34,7 +34,7 @@ def stripOutRouteStrings(routes):
 
 class Imperial(BaseHandler):
     def get(self): 
-        self.render('coming_soon.html')
+        self.render('test_blog2.html')
 
 class GDocs(BaseHandler):
     def get(self): 
@@ -52,6 +52,15 @@ class Rhythmludus(BaseHandler):
     def get(self): 
         self.render('coming_soon.html')
 
+class Neuro(BaseHandler):
+    def get(self): 
+        self.render('coming_soon.html')
+
+class Slack(BaseHandler):
+    def get(self): 
+        self.render('coming_soon.html')
+
+
 config = {}
 config['webapp2_extras.sessions'] = {
     'secret_key': 'my-super-secret-key',
@@ -67,6 +76,7 @@ blog_routes = [('/blog', blog.BlogPage), ('/blog/newpost', blog.EntryPage),
 
 routes = [('/nav', Nav), ('/', Me), ('/imperial', Imperial),
         ('/gdocs', GDocs), ('/angn', ANGN), ('/pe', PE),
+        ('/slackline', Slack), ('/neuroscience', Neuro),
         ('/rhythmludus', Rhythmludus)] + blog_routes
 
 # ('/yt_handler', YtPage),

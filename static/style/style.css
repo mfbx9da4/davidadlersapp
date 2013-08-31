@@ -381,13 +381,13 @@
 			}
 
 			ul.social li.facebook			{ background-color: #3C5A98; }
-			/*ul.social li.linkedin			{ background-color: #006599; }*/
+			ul.social li.linkedin			{ background-color: #006599; }
 			ul.social li.github				{ background-color: #969696; }
 
-			ul.social li.facebook:hover				{ background-color: #4475DB; }
+			ul.social li.facebook:hover				{ background-color: #568DFF; }
 			ul.social li.twitter:hover				{ background-color: #2DAAE4; }
 			ul.social li.dribbble:hover				{ background-color: #C4376B; }
-			ul.social li.linkedin:hover				{ background-color: #006599; }
+			ul.social li.linkedin:hover				{ background-color: #61BCEB; }
 			ul.social li.tumblr:hover				{ background-color: #51718A; }
 			ul.social li.googleplus:hover			{ background-color: #DA2713; }
 			ul.social li.github:hover				{ background-color: #FAFAFA; }
@@ -452,6 +452,62 @@
 		{
 			position: relative;
 		}
+	
+	.box-style1 
+	{
+		position: relative;
+	}
+		/*
+		.box-style1:hover p, 
+		.box-style1:hover h3 */
+		.box-style1:hover .featured-icon
+		{
+			/*color: #1B75A6;*/
+			color: #1DBD36;
+			text-shadow: 3px 3px 2px #ccc;
+			-moz-transition: color .2s ease-in-out;
+			-webkit-transition: color .2s ease-in-out;
+			-o-transition: color .2s ease-in-out;
+			-ms-transition: color .2s ease-in-out;
+			transition: color .2s ease-in-out;
+		}
+
+		.box-style1:hover
+		{
+			box-shadow: inset 0px 0px 0px 2px rgba(0,0,0,0.15), 0px 3px 4px 0px rgba(0,0,0,0.1);
+			position: relative;
+			top:-5px;
+		}
+	.box-style2 
+	{
+		position: relative;
+	}
+		.box-style2:hover h3
+		{
+			color: #1B75A6;
+			-moz-transition: color .2s ease-in-out;
+			-webkit-transition: color .2s ease-in-out;
+			-o-transition: color .2s ease-in-out;
+			-ms-transition: color .2s ease-in-out;
+			transition: color .2s ease-in-out;
+		}
+		.box-style2:hover
+		{
+			box-shadow: inset 0px 0px 0px 2px rgba(0,0,0,0.15), 0px 3px 4px 0px rgba(0,0,0,0.1);
+			position: relative;
+			top:-5px;
+		}
+
+
+	.panel-link
+	{
+		position: absolute;
+		width: 100%;
+		height:	100%;
+		top: 0;
+		left:0;
+
+	}
 
 /*********************************************************************************/
 /* Icons                                                                         */
@@ -807,15 +863,12 @@
 	.featured-icon
 	{
 		font-size: 5em;
-		color: #979BC4;
+		/*color: #3D448F;*/
+		color: #1B75A6;
+
 		display: block;
 		margin: 0.5em 0 0.65em 0;
 	}
-			.featured-icon:hover
-			{
-				color: #3D448F;
-				/*color: #CCC;*/
-			}
 
 /*********************************************************************************/
 /* Wrappers                                                                      */
