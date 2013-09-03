@@ -22,9 +22,9 @@ class Nav(BaseHandler):
         pages = stripOutRouteStrings(app.router.match_routes)
         self.render('home.html', pages=pages)
 
-class Me(BaseHandler):
+class Home(BaseHandler):
     def get(self): 
-        self.render('about_me.html')
+        self.render('home.html')
 
 def stripOutRouteStrings(routes):
     strs = []
@@ -34,7 +34,7 @@ def stripOutRouteStrings(routes):
 
 class Imperial(BaseHandler):
     def get(self): 
-        self.render('test_blog2.html')
+        self.render('test_blog.html')
 
 class GDocs(BaseHandler):
     def get(self): 
@@ -74,7 +74,7 @@ blog_routes = [('/blog', blog.BlogPage), ('/blog/newpost', blog.EntryPage),
     ('/blog/logout', signup.LogoutHandler),
     ('/blog/welcome', signup.ThanksHandler)]
 
-routes = [('/nav', Nav), ('/', Me), ('/imperial', Imperial),
+routes = [('/nav', Nav), ('/', Home), ('/imperial', Imperial),
         ('/gdocs', GDocs), ('/angn', ANGN), ('/pe', PE),
         ('/slackline', Slack), ('/neuroscience', Neuro),
         ('/rhythmludus', Rhythmludus)] + blog_routes
