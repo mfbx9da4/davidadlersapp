@@ -25,6 +25,16 @@ If you're interested in the css styling file we use for the example page, the li
 
 from object_models import BaseHandler, BlogPost
 
+# class JSONpage
+# 	def get(self):
+# 		query
+# 		dict .subj, .cont, .date strfTime
+# 		escape "" to JSON
+# 		set header to JSON
+# 		writeJSON
+
+# class JSONFront
+
 
 class EntryPage(BaseHandler):
 	def get(self):
@@ -37,7 +47,7 @@ class EntryPage(BaseHandler):
 			self.redirect('/udacity/blog/%d' % self.post.key().id())
 		else:
 			kw = dict(self.entry.items() + self.errors.items())
-			self.render('newpost.html', **kw)
+			self.render('old_blog/newpost.html', **kw)
 
 	def getEntry(self):
 		self.entry = {}
@@ -64,19 +74,19 @@ class EntryPage(BaseHandler):
 class BlogPage(BaseHandler):
 	def get(self):
 		entries_query = BlogPost.all().order('-created')
-		self.render('front.html', posts=entries_query.fetch(10))
+		self.render('old_blog/front.html', posts=entries_query.fetch(10))
 
 
 
 class PermalinkPage(BaseHandler):
 	def get(self, blog_id):
 		e = BlogPost.get_by_id(int(blog_id))
-		self.render('permalink.html', post=e)
+		self.render('old_blog/permalink.html', post=e)
 
 class EditPage(BaseHandler):
 	def get(self, blog_id):
 		post = BlogPost.get_by_id(int(blog_id))
-		self.render('edit.html', post=post)
+		self.render('old_blog/edit.html', post=post)
 
 	def post(self, blog_id):
 		post = BlogPost.get_by_id(int(blog_id))

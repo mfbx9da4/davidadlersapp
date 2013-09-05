@@ -14,6 +14,7 @@ import webapp2
 from views.object_models import BaseHandler
 from views import blog, signup
 
+# TODO aboutme/code/.../cv/
 
 
 

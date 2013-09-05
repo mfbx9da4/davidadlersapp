@@ -2,7 +2,7 @@ window._skel_config = {
 	prefix: 'style/style',
 	resetCSS: true,
 	boxModel: 'border',
-	containers: 1180,
+	containers: 1100,
 	grid: {
 		gutters: 40
 	},
@@ -14,12 +14,12 @@ window._skel_config = {
 			range: '-1659'
 		},
 		'narrow': {
-			range: '-1200',
-			containers: 960,
-			viewportWidth: 1080
+			range: '-1100',
+			containers: 630,
+			viewportWidt5: 1000
 		},
 		'narrower': {
-			range: '-960',
+			range: '-500',
 			containers: 'fluid',
 			lockViewport: true,
 			grid: {

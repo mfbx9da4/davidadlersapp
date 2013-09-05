@@ -10,14 +10,14 @@
 
 	body
 	{
-		font-size: 12pt;
-		color: #363132;
+		font-size: 15pt;
 	}
 
 	h1
 	{
 		font-size: 3.25em;
 		letter-spacing: -0.025em;
+		padding-bottom: .4em;
 	}
 
 	h2
@@ -114,7 +114,7 @@
 	
 		.wrapper-first
 		{
-			padding-top: 12em;
+			padding-top: 6em;
 		}
 
 		.wrapper-style4 .row-special

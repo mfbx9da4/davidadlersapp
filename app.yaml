@@ -7,8 +7,6 @@ threadsafe: true
 handlers:
 - url: /style
   static_dir: static/style
-- url: /5grid-style
-  static_dir: static/style/5grid-style
 - url: /images
   static_dir: static/images
 - url: /files
