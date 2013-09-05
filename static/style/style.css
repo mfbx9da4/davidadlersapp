@@ -472,7 +472,7 @@
 		.box-style1:hover .featured-icon
 		{
 			color: #BF7730;
-			-moz-transition: color .2s ease-in-out;
+			-moz-xition: color .2s ease-in-out;
 			-webkit-transition: color .2s ease-in-out;
 			-o-transition: color .2s ease-in-out;
 			-ms-transition: color .2s ease-in-out;
