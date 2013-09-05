@@ -9,6 +9,33 @@
 	}
 
 /*********************************************************************************/
+/* Info box                                                                      */
+/*********************************************************************************/
+
+		#info:before {
+			content: '';
+			position: absolute;
+			left: 192px;
+			top: 27px;
+			border-left: 13px solid #ffff4c;
+			border-right: 15px solid transparent;
+			border-top: 30px solid #ffff4c;
+			border-bottom: 30px solid transparent;
+			z-index: 10;
+		}
+		#info:after {
+			content: '';
+			position: absolute;
+			left: 190px;
+			top: 28px;
+			border-left: 16px solid #FFC61C;
+			border-right: 16px solid transparent;
+			border-top: 33px solid #FFC61C;
+			border-bottom: 33px solid transparent;
+		}
+
+
+/*********************************************************************************/
 /* Wrappers                                                                      */
 /*********************************************************************************/
 

@@ -47,7 +47,7 @@ blog_routes = [('/blog', blog.BlogPage), ('/blog/newpost', blog.EntryPage),
     ('/blog/logout', signup.LogoutHandler),
     ('/blog/welcome', signup.ThanksHandler)]
 
-routes = [('/nav', Nav), ('/', Home), ('/imperial', ComingSoon),
+routes = [('/', Home), ('/imperial', ComingSoon),
         ('/gdocs', ComingSoon), ('/angn', ANGN), ('/pe', ComingSoon),
         ('/slackline', ComingSoon), ('/neuroscience', ComingSoon),
         ('/rhythmludus', ComingSoon)] + blog_routes
