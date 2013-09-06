@@ -8,10 +8,10 @@
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet" />
     <!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/config.js"></script>
-    <script src="js/skel.min.js"></script>
-    <script src="js/skel-panels.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/config.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/skel-panels.min.js"></script>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -37,18 +37,19 @@
             info_box.toggleClass('show');
           }
         }
+
     </script>
-    <noscript><link rel="stylesheet" href="style/5grid-noscript.min.css" /><link rel="stylesheet" href="style/style.css" /><link rel="stylesheet" href="style/style-desktop.css" /></noscript>
-    <!--[if lte IE 9]><link rel="stylesheet" href="style/ie9.css" /><![endif]-->
-    <!--[if lte IE 8]><link rel="stylesheet" href="style/ie8.css" /><![endif]-->
-    <!--[if lte IE 7]><link rel="stylesheet" href="style/ie7.css" /><![endif]-->
-    <script src="js/init.js"></script>
+    <noscript><link rel="stylesheet" href="/style/5grid-noscript.min.css" /><link rel="stylesheet" href="/style/style.css" /><link rel="stylesheet" href="/style/style-desktop.css" /></noscript>
+    <!--[if lte IE 9]><link rel="stylesheet" href="/style/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="/style/ie8.css" /><![endif]-->
+    <!--[if lte IE 7]><link rel="stylesheet" href="/style/ie7.css" /><![endif]-->
+    <script src="/js/init.js"></script>
   </head>
   <body>
     <!-- Nav -->
-      <nav id="nav">
+      <nav id="nav" class="skel-panels-fixed">
         <ul class="menu">
-          <li><a href="/">Home</a></li>
+          <li><a href="/"> <span class="icon icon-home" /> Home</a></li>
           <li><a href="#work">About me</a>
             <ul >
               <li><a href="/neuroscience">Neuroscience</a></li>
@@ -56,49 +57,21 @@
               <li><a href="/slackline">Slackline</a></li>
             </ul>   
           </li>
-          <li><a href="/#portfolio">Portfolio</a>
+          <li><a href="/#portfolio"> Portfolio</a>
             <ul >
-              <li><a href="/angn">Final year project</a></li>
-              <li><a href="/rhythmludus">HTML5 game</a></li>
-              <li><a href="/pe">Project Euler</a></li>
-              <li><a href="/gdocs">Referencing system</a></li>
+              <li><a href="/portfolio/meta">This site</a></li>
+              <li><a href="/portfolio/angn">Final year project</a></li>
+              <li><a href="/portfolio/rhythmludus">HTML5 game</a></li>
+              <li><a href="/portfolio/pe">Project Euler</a></li>
+              <li><a href="/portfolio/gdocs">Referencing system</a></li>
             </ul>   
           </li>
-          <li><a href="/#contact">Contact</a></li>
+          <li><a href="/#contact"> <span class="icon icon-user" /> Contact</a></li>
         </ul>
       </nav>
       <div id="content">
-        <div class="wrapper wrapper-style5 wrapper-first">
-          <article class="5grid container">
-            <header><h1>{% block header %}{% endblock %}</h1></header>
-            <div class="row">
-                <div class="4u">
-                  <section class="box box-style2">
-                    <a onclick="toggleVisibility('what')" href="#info_content"><span class="panel-link"></span></a>
-                    <span class="icon nav-icon icon-info-sign"></span>
-                    <h3>What?</h3>
-                  </section>
-                </div>
-                <div class="4u">
-                  <section class="box box-style2">
-                    <a onclick="toggleVisibility('why')" href="#info_content"><span class="panel-link"></span></a>
-                    <span class="icon nav-icon icon-lightbulb"></span>
-                    <h3 >Why?</h3>
-                  </section>
-                </div>
-                <div class="4u">
-                  <section class="box box-style2">
-                    <a  onclick="toggleVisibility('links')" href="#info_content"><span class="panel-link"></span></a>
-                    <span class="icon nav-icon icon-external-link"></span>
-                    <h3>Links</h3>
-                  </section>
-                </div>
-            </div>
-            <hr>
-            {% block content %}
-            {% endblock %}
-          </article>
-        </div>
+        {% block content %}
+        {% endblock %}
       </div>
   </body>
 </html>

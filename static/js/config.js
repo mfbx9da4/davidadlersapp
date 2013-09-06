@@ -1,5 +1,5 @@
 window._skel_config = {
-	prefix: 'style/style',
+	prefix: '/style/style',
 	resetCSS: true,
 	boxModel: 'border',
 	containers: 1100,
@@ -23,8 +23,7 @@ window._skel_config = {
 			containers: 'fluid',
 			lockViewport: true,
 			grid: {
-				gutters: 10,
-				collapse: true
+				gutters: 10
 			}
 		},
 		'mobile': {
@@ -32,8 +31,7 @@ window._skel_config = {
 			containers: 'fluid',
 			lockViewport: true,
 			grid: {
-				gutters: 5,
-				collapse: true
+				gutters: 5
 			}
 		}
 	}

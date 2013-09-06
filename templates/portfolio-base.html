@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+<div class="wrapper wrapper-style5 wrapper-first">
+          <article class="5grid container">
+            <header><h1>{% block header %}{% endblock %}</h1></header>
+            <div class="row">
+                <div class="4u">
+                  <section class="box box-style2">
+                    <a onclick="toggleVisibility('what')" href="#info_content"><span class="panel-link"></span></a>
+                    <span class="icon nav-icon icon-info-sign"></span>
+                    <h3>What?</h3>
+                  </section>
+                </div>
+                <div class="4u">
+                  <section class="box box-style2">
+                    <a onclick="toggleVisibility('why')" href="#info_content"><span class="panel-link"></span></a>
+                    <span class="icon nav-icon icon-lightbulb"></span>
+                    <h3 >Why?</h3>
+                  </section>
+                </div>
+                <div class="4u">
+                  <section class="box box-style2">
+                    <a  onclick="toggleVisibility('links')" href="#info_content"><span class="panel-link"></span></a>
+                    <span class="icon nav-icon icon-external-link"></span>
+                    <h3>Links</h3>
+                  </section>
+                </div>
+            </div>
+            <hr>
+            {% block portfolio %}
+            {% endblock %}
+          </article>
+        </div>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Admin{% endblock %}
+
+{% block content %}
+		<style type="text/css">
+		</style>
+		<script type="text/javascript">
+		</script>
+		<div class="wrapper wrapper-style2 ">
+		  <div class="container">
+
+			<div class="row">
+				<header class="12u">
+					<h2>Admin</h2>
+				</header>
+			</div>
+			<div class="row">
+			<div class="6u">
+				<form action="/admin" method="POST">
+						<input type="text" name="url_name" value="Url name"/>
+						<input type="text" name="html_file_name" value="HTML file name"/>
+						<input type="text" name="title" value="Nav title"/>
+						<input type="submit" name="Submit"/>
+				</form>
+			</div>
+			<div class="6u">
+				<table>
+				{% for p in portfolios %}
+					<tr>
+						<td>{{p.title}}</td>
+						<td> | {{p.url_name}}</td>
+						<td> | {{p.html_file_name}}</td>
+					</tr>
+				{% endfor %}
+				</table>
+			</div>
+			</div>
+		</div>
+		</div>
+{% endblock %}
+
+
+
+
+

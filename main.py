@@ -11,31 +11,48 @@ __website__ = 'http://davidadlersapp.appspot.com/'
 import re
 
 import webapp2
+from google.appengine.ext import db
+
 from views.object_models import BaseHandler
 from views import blog, signup
 
+class Portfolio(db.Model):
+    """Portfolio entry."""
+    title = db.StringProperty(multiline=False, required=True)
+    url_name = db.StringProperty(multiline=False, required=True)
+    html_file_name = db.StringProperty(multiline=False, required=True)
+    created = db.DateTimeProperty(auto_now_add=True)
+    last_modified = db.DateTimeProperty(auto_now=True)
 
 class Home(BaseHandler):
     def get(self): 
         self.render('home.html')
 
-def stripOutRouteStrings(routes):
-    strs = []
-    for r in routes:
-        strs.append(re.findall('/[a-zA-Z/0-9._()]*', r.template)[0])
-    return strs
-
-class ComingSoon(BaseHandler):
-    def get(self): 
-        self.render('coming_soon.html')
-
-class ANGN(BaseHandler):
-    def get(self): 
-        self.render('angn.html')
-
 class Rhythmludus(BaseHandler):
     def get(self): 
         self.render('rhythmludus.html')
+
+class PortfolioHandler(BaseHandler):
+    def get(self, url_name):
+        query = Portfolio.all().filter('url_name =', url_name)
+        p = query.get() 
+        if p:
+            self.render(p.html_file_name, p=p)
+        else:
+            self.render('coming_soon.html')
+
+class Admin(BaseHandler):
+    def get(self):
+        portfolios = Portfolio.all().fetch(1000)
+        self.render('admin.html', portfolios=portfolios)
+
+    def post(self):
+        title = self.request.get('title')
+        url_name = self.request.get('url_name')
+        html_file_name = self.request.get('html_file_name')
+        p = Portfolio(title=title, url_name=url_name, html_file_name=html_file_name)
+        p.put()
+        self.get()
 
 
 config = {}
@@ -51,10 +68,7 @@ blog_routes = [('/blog', blog.BlogPage), ('/blog/newpost', blog.EntryPage),
     ('/blog/logout', signup.LogoutHandler),
     ('/blog/welcome', signup.ThanksHandler)]
 
-routes = [('/', Home), ('/imperial', ComingSoon),
-        ('/gdocs', ComingSoon), ('/angn', ANGN), ('/pe', ComingSoon),
-        ('/slackline', ComingSoon), ('/neuroscience', ComingSoon),
-        ('/rhythmludus', Rhythmludus)] + blog_routes
+routes = [('/', Home), ('/admin', Admin), (r'/portfolio/(\w+)', PortfolioHandler)] + blog_routes
 
 
 app = webapp2.WSGIApplication(routes,

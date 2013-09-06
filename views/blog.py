@@ -76,8 +76,6 @@ class BlogPage(BaseHandler):
 		entries_query = BlogPost.all().order('-created')
 		self.render('old_blog/front.html', posts=entries_query.fetch(10))
 
-
-
 class PermalinkPage(BaseHandler):
 	def get(self, blog_id):
 		e = BlogPost.get_by_id(int(blog_id))

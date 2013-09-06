@@ -946,12 +946,13 @@
 		#info
 		{
 			width: 100%;
-			background-color: #ffff4c;
+			background-color: #FFDF33;
 			margin: 0 auto;
-			border: #FFC61C solid 1px;
+			border: #ccc solid 1px;
 			border-radius: 10px;
 			text-align: center;
 			position: relative;
+			color: black;
 
 		}
 
