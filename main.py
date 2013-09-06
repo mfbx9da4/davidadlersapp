@@ -33,6 +33,10 @@ class ANGN(BaseHandler):
     def get(self): 
         self.render('angn.html')
 
+class Rhythmludus(BaseHandler):
+    def get(self): 
+        self.render('rhythmludus.html')
+
 
 config = {}
 config['webapp2_extras.sessions'] = {
@@ -50,7 +54,7 @@ blog_routes = [('/blog', blog.BlogPage), ('/blog/newpost', blog.EntryPage),
 routes = [('/', Home), ('/imperial', ComingSoon),
         ('/gdocs', ComingSoon), ('/angn', ANGN), ('/pe', ComingSoon),
         ('/slackline', ComingSoon), ('/neuroscience', ComingSoon),
-        ('/rhythmludus', ComingSoon)] + blog_routes
+        ('/rhythmludus', Rhythmludus)] + blog_routes
 
 
 app = webapp2.WSGIApplication(routes,

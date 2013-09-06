@@ -9,11 +9,9 @@
     <!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
 
     <script src="js/jquery.min.js"></script>
-    <script src="js/init.js"></script>
     <script src="js/config.js"></script>
     <script src="js/skel.min.js"></script>
     <script src="js/skel-panels.min.js"></script>
-
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -44,7 +42,7 @@
     <!--[if lte IE 9]><link rel="stylesheet" href="style/ie9.css" /><![endif]-->
     <!--[if lte IE 8]><link rel="stylesheet" href="style/ie8.css" /><![endif]-->
     <!--[if lte IE 7]><link rel="stylesheet" href="style/ie7.css" /><![endif]-->
-
+    <script src="js/init.js"></script>
   </head>
   <body>
     <!-- Nav -->
@@ -70,8 +68,37 @@
         </ul>
       </nav>
       <div id="content">
-        {% block content %}
-        {% endblock %}
+        <div class="wrapper wrapper-style5 wrapper-first">
+          <article class="5grid container">
+            <header><h1>{% block header %}{% endblock %}</h1></header>
+            <div class="row">
+                <div class="4u">
+                  <section class="box box-style2">
+                    <a onclick="toggleVisibility('what')" href="#info_content"><span class="panel-link"></span></a>
+                    <span class="icon nav-icon icon-info-sign"></span>
+                    <h3>What?</h3>
+                  </section>
+                </div>
+                <div class="4u">
+                  <section class="box box-style2">
+                    <a onclick="toggleVisibility('why')" href="#info_content"><span class="panel-link"></span></a>
+                    <span class="icon nav-icon icon-lightbulb"></span>
+                    <h3 >Why?</h3>
+                  </section>
+                </div>
+                <div class="4u">
+                  <section class="box box-style2">
+                    <a  onclick="toggleVisibility('links')" href="#info_content"><span class="panel-link"></span></a>
+                    <span class="icon nav-icon icon-external-link"></span>
+                    <h3>Links</h3>
+                  </section>
+                </div>
+            </div>
+            <hr>
+            {% block content %}
+            {% endblock %}
+          </article>
+        </div>
       </div>
   </body>
 </html>
