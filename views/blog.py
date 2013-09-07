@@ -38,16 +38,16 @@ from object_models import BaseHandler, BlogPost
 
 class EntryPage(BaseHandler):
 	def get(self):
-		self.render('newpost.html')
+		self.render('blog-newpost.html')
 
 	def post(self):
 		self.getEntry()
 		if not self.errors:
 			self.putPost()
-			self.redirect('/udacity/blog/%d' % self.post.key().id())
+			self.redirect('/blog/%d' % self.post.key().id())
 		else:
 			kw = dict(self.entry.items() + self.errors.items())
-			self.render('old_blog/newpost.html', **kw)
+			self.render('blog-newpost.html', **kw)
 
 	def getEntry(self):
 		self.entry = {}
@@ -74,24 +74,24 @@ class EntryPage(BaseHandler):
 class BlogPage(BaseHandler):
 	def get(self):
 		entries_query = BlogPost.all().order('-created')
-		self.render('old_blog/front.html', posts=entries_query.fetch(10))
+		self.render('blog-front.html', posts=entries_query.fetch(10))
 
 class PermalinkPage(BaseHandler):
 	def get(self, blog_id):
 		e = BlogPost.get_by_id(int(blog_id))
-		self.render('old_blog/permalink.html', post=e)
+		self.render('blog-permalink.html', post=e)
 
 class EditPage(BaseHandler):
 	def get(self, blog_id):
 		post = BlogPost.get_by_id(int(blog_id))
-		self.render('old_blog/edit.html', post=post)
+		self.render('blog-edit.html', post=post)
 
 	def post(self, blog_id):
 		post = BlogPost.get_by_id(int(blog_id))
 		post.subject = self.request.get('subject')
 		post.content = self.request.get('content')
 		post.put()
-		self.redirect('/udacity/blog/%d' % post.key().id())
+		self.redirect('/blog/%d' % post.key().id())
 
 
 

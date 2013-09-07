@@ -74,15 +74,15 @@ class User(db.Model):
 
 class SignupHandler(BaseHandler):
     def get(self):
-        self.render('signup.html')
+        self.render('blog-signup.html')
 
     def post(self):
         form_is_valid = self.validForm()
         if not (self.userExists()) and form_is_valid:
                 self.registerUser()
-                self.redirect('/welcome')
+                self.redirect('/blog/welcome')
         else:
-            self.render('signup.html', **self.form)
+            self.render('blog-signup.html', **self.form)
 
     def registerUser(self):
         h, salt = make_pw_hash(self.form['uname'], self.form['pwd'])
@@ -120,15 +120,15 @@ class ThanksHandler(webapp2.RequestHandler):
         if cookie:
             user_id, h = cookie.split('|')
         else:
-            return self.redirect('/udacity/signup')
+            return self.redirect('/blog/signup')
         user = User.get_by_id(int(user_id))
         if user:
             if user.pwd_hash == h:
                 self.response.out.write("Welcome, " + user.username)
             else:
-                return self.redirect('/udacity/signup')
+                return self.redirect('/blog/signup')
         else:
-            return self.redirect('/udacity/signup')
+            return self.redirect('/blog/signup')
 
 
     def validCookie(self):
@@ -139,7 +139,7 @@ class ThanksHandler(webapp2.RequestHandler):
 
 class LoginHandler(BaseHandler):
     def get(self):
-        self.render('login.html')
+        self.render('blog-login.html')
 
     def post(self):
         self.validForm()
@@ -168,7 +168,7 @@ class LoginHandler(BaseHandler):
             pw_hash, s = make_pw_hash(user.username, self.form['pwd'], user.salt)
             if pw_hash == user.pwd_hash:
                 self.response.set_cookie('user_id', '%s|%s' % (user.key().id(), pw_hash))
-                self.redirect('/welcome')
+                self.redirect('/blog/welcome')
             else:
                 self.write('Wrong username or password')
         else:
@@ -178,5 +178,5 @@ class LoginHandler(BaseHandler):
 class LogoutHandler(BaseHandler):
     def get(self):
         self.response.set_cookie('user_id', '')
-        self.redirect('/udacity/signup')
+        self.redirect('/blog/signup')
 

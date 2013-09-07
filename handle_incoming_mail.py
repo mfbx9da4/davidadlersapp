@@ -26,7 +26,7 @@ class ContactHandler(BaseHandler):
         subject = self.request.get('subject')
         msg = self.request.get('message')
         if email and msg:
-          msg = name + '@' + email + 'sent you the following: \n' + self.request.get('message')
+          msg = 'Name : ' + name + ', email : ' + email + ' sent you the following: \n' + self.request.get('message')
           mail.send_mail(sender="Davidadlersapp Support <da@davidadlersapp.appspotmail.com>",
                         to="David Adler <dalberto.adler@gmail.com>",
                         subject=subject,

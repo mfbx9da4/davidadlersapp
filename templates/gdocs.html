@@ -1,0 +1,52 @@
+{% extends "portfolio-base.html" %}
+
+{% block title %}Google docs referencing system{% endblock %}
+
+{% block header %}Google docs referencing system{% endblock %}
+
+      
+{% block portfolio %}
+          <div class="row ">
+              <div id="info_content" class="12u box-style3 transition"></div>
+              <div id="what" class="hide box-style3 transition">
+                <h2>What?</h2>
+                  <p>
+                  	A referencing system plugin for google documents which makes calls to pubmed API. <a href="http://www.ncbi.nlm.nih.gov/pubmed">Pubmed</a> is a database of medical publications commonly used by life scientists. The google apps script scans the document for inline pubmed urls, makes a call to the pubmed API and subsequently generates a bibliography and updates inline pubmed citations. 
+                  </p>
+                  <p>
+                  	 Below is a demo:
+                  </p>
+                  <div class="vid">
+					<iframe width="500" height="315" src="//www.youtube.com/embed/As24LZiltxQ?rel=0" frameborder="0" allowfullscreen></iframe>
+                  </div>
+
+                </div>
+                <div id="why" class="hide box-style3 transition">
+                <h2>Why?</h2>
+                  <p>
+                  	While writing <a href="/files/lit_review.pdf">an essay</a> for uni I found referencing software to be cumbersome and overcomplicated. Furthermore, I found no referencing software for my favourite word processing software - google documents. So I put two and two together and built this! 
+                  </p>
+                </div>
+              <div id="links" class="hide box-style3 transition">
+                <h2>Links</h2>
+                  <div class="5grid 5grid-container">
+                    <div class="row">                      
+                      <div class="-4u 4u">
+                        <section class="box box-style1">
+                          <a target="_blank" href="https://github.com/mfbx9da4/gdocs-cite-pubmed"><span class="panel-link"></span></a>
+                          <span class="icon featured-icon icon-github"></span>
+                          <h3>Source code</h3>
+                        </section>
+                      </div>
+                    </div>
+                  </div>
+                  
+              </div>
+          </div>
+{% endblock %}
+        
+
+
+
+
+

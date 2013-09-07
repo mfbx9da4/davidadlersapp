@@ -63,6 +63,7 @@ config['webapp2_extras.sessions'] = {
 
 blog_routes = [('/blog', blog.BlogPage), ('/blog/newpost', blog.EntryPage),
     (r'/blog/(\d+)',  blog.PermalinkPage),
+    (r'/blog/(\d+)\.json',  blog.JSON),
     (r'/blog/edit/(\d+)', blog.EditPage), 
     ('/blog/signup', signup.SignupHandler),
     ('/blog/login', signup.LoginHandler),
