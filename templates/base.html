@@ -46,32 +46,32 @@
     <script src="/js/init.js"></script>
   </head>
   <body>
-    <!-- Nav -->
-      <nav id="nav" class="skel-panels-fixed">
-        <ul class="menu">
-          <li><a href="/"> <span class="icon icon-home" /> Home</a></li>
-          <li><a href="#work">About me</a>
-            <ul >
-              <li><a href="/neuroscience">Neuroscience</a></li>
-              <li><a href="/code">Code</a></li>
-              <li><a href="/slackline">Slackline</a></li>
-            </ul>   
-          </li>
-          <li><a href="/#portfolio"> Portfolio</a>
-            <ul >
-              <li><a href="/portfolio/meta">This site</a></li>
-              <li><a href="/portfolio/angn">Final year project</a></li>
-              <li><a href="/portfolio/rhythmludus">HTML5 game</a></li>
-              <li><a href="/portfolio/pe">Project Euler</a></li>
-              <li><a href="/portfolio/gdocs">Referencing system</a></li>
-            </ul>   
-          </li>
-          <li><a href="/#contact"> <span class="icon icon-user" /> Contact</a></li>
-        </ul>
-      </nav>
-      <div id="content">
-        {% block content %}
-        {% endblock %}
-      </div>
+      <!-- Nav -->
+        <nav id="nav" class="skel-panels-fixed">
+          <ul class="menu">
+            <li><a href="/"> <span class="icon icon-home" /> Home</a></li>
+            <li><a href="#work">About me</a>
+              <ul >
+                <li><a href="/neuroscience">Neuroscience</a></li>
+                <li><a href="/code">Code</a></li>
+                <li><a href="/slackline">Slackline</a></li>
+              </ul>   
+            </li>
+            <li><a href="/#portfolio"> Portfolio</a>
+              <ul >
+                <li><a href="/portfolio/meta">This site</a></li>
+                <li><a href="/portfolio/angn">Final year project</a></li>
+                <li><a href="/portfolio/rhythmludus">HTML5 game</a></li>
+                <li><a href="/portfolio/pe">Project Euler</a></li>
+                <li><a href="/portfolio/gdocs">Referencing system</a></li>
+              </ul>   
+            </li>
+            <li><a href="/#contact"  <span class="icon icon-user" /> Contact</a></li>
+          </ul>
+        </nav>
+        <div id="content">
+          {% block content %}
+          {% endblock %}
+        </div>
   </body>
 </html>

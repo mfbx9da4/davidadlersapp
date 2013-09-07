@@ -31,8 +31,10 @@ window._skel_config = {
 			containers: 'fluid',
 			lockViewport: true,
 			grid: {
-				gutters: 5
+				gutters: 5,
+				collapse : true
 			}
 		}
 	}
 };
+

@@ -15,6 +15,7 @@ from google.appengine.ext import db
 
 from views.object_models import BaseHandler
 from views import blog, signup
+from handle_incoming_mail import LogSenderHandler, ContactHandler
 
 class Portfolio(db.Model):
     """Portfolio entry."""
@@ -68,7 +69,8 @@ blog_routes = [('/blog', blog.BlogPage), ('/blog/newpost', blog.EntryPage),
     ('/blog/logout', signup.LogoutHandler),
     ('/blog/welcome', signup.ThanksHandler)]
 
-routes = [('/', Home), ('/admin', Admin), (r'/portfolio/(\w+)', PortfolioHandler)] + blog_routes
+routes = [('/', Home), ('/admin', Admin), (r'/portfolio/(\w+)', PortfolioHandler),
+        ('/mail', ContactHandler), LogSenderHandler.mapping()] + blog_routes
 
 
 app = webapp2.WSGIApplication(routes,

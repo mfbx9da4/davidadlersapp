@@ -20,6 +20,13 @@ handlers:
 - url: /.*
   script: main.app
 
+- url: /_ah/mail/.+
+  script: handle_incoming_mail.app
+  login: admin
+
+
+inbound_services:
+- mail
 
 
 libraries:
