@@ -26,7 +26,7 @@ class BlogPost(db.Model):
 
     def render(self):
         self._render_text = self.content.replace('\n', '<br>')
-        return render_str('post.html', p=self)
+        return render_str('blog-post.html', p=self)
 
 
 class BaseHandler(webapp2.RequestHandler):

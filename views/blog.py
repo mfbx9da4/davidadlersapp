@@ -22,6 +22,7 @@ instead only entered http://udacity-cs253.appspot.com/ then the grading script
  would not work. Don't forget to escape your output!
 If you're interested in the css styling file we use for the example page, the link is here.
 """
+import json
 
 from object_models import BaseHandler, BlogPost
 
@@ -34,6 +35,18 @@ from object_models import BaseHandler, BlogPost
 # 		writeJSON
 
 # class JSONFront
+
+class JSON(BaseHandler):
+	def get(self, id):
+		e = BlogPost.get_by_id(int(blog_id))
+		if e:
+			dic = dict()
+			dic['subject'] = e.subject
+			dic['content'] = e.content
+			dic['created'] = e.created
+			dic['last_modified'] = e.last_modified
+			self.response.headers['Content-Type'] = "application/json"
+			self.response.out.write(json.dumps(dic))
 
 
 class EntryPage(BaseHandler):

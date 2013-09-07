@@ -17,9 +17,9 @@
 			position: absolute;
 			left: 192px;
 			top: 27px;
-			border-left: 13px solid #ccc;
+			border-left: 13px solid #FFDF33;
 			border-right: 15px solid transparent;
-			border-top: 30px solid #ccc;
+			border-top: 30px solid #FFDF33;
 			border-bottom: 30px solid transparent;
 			z-index: 10;
 		}
@@ -28,9 +28,9 @@
 			position: absolute;
 			left: 190px;
 			top: 28px;
-			border-left: 16px solid #FFDF33;
+			border-left: 16px solid #ccc;
 			border-right: 16px solid transparent;
-			border-top: 33px solid #FFDF33;
+			border-top: 33px solid #ccc;
 			border-bottom: 33px solid transparent;
 		}
 

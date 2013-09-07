@@ -18,11 +18,14 @@
 </head>
 
 <body>
-  <a href="/udacity/blog" class="main-title">
-    David's blog
-  </a>
   <button onclick="window.location.href='/'">Home</button>
   <button onclick="window.location.href='/blog/newpost'">New post</button>
+  <button style="float:right" onclick="window.location.href='/signup'">Sign up</button>
+  <button style="float:right" onclick="window.location.href='/signin'">Sign in</button>
+  <a href="/udacity/blog" class="main-title">
+    Open blog
+  </a>
+  <h3 style="color: #707077; text-align: center">You can write what you like, where you like and anyone can edit it.</h3>
   <div id="content">
   {% block content %}
   {% endblock %}
