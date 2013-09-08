@@ -28,6 +28,14 @@ class BlogPost(db.Model):
         self._render_text = self.content.replace('\n', '<br>')
         return render_str('blog-post.html', p=self)
 
+    def toDict(post):
+        dic = dict()
+        dic['subject'] = post.subject
+        dic['content'] = post.content
+        dic['created'] = post.created.strftime("%b %d, %Y")
+        dic['last_modified'] = post.last_modified.strftime("%b %d, %Y")
+        return dic
+
 
 class BaseHandler(webapp2.RequestHandler):
     def write(self, *a, **kw):

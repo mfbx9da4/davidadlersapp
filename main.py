@@ -14,7 +14,8 @@ import webapp2
 from google.appengine.ext import db
 
 from views.object_models import BaseHandler
-from views import blog, signup
+from views import blog_blog as blog
+from views import blog_signup as signup
 from handle_incoming_mail import LogSenderHandler, ContactHandler
 
 class Portfolio(db.Model):
@@ -61,16 +62,17 @@ config['webapp2_extras.sessions'] = {
     'secret_key': 'my-super-secret-key',
 }
 
-blog_routes = [('/blog', blog.BlogPage), ('/blog/newpost', blog.EntryPage),
+blog_routes = [('/blog/?', blog.BlogPage), ('/blog/newpost', blog.EntryPage),
     (r'/blog/(\d+)',  blog.PermalinkPage),
     (r'/blog/(\d+)\.json',  blog.JSON),
+    ('/blog/.json',  blog.JSONFront),
     (r'/blog/edit/(\d+)', blog.EditPage), 
     ('/blog/signup', signup.SignupHandler),
     ('/blog/login', signup.LoginHandler),
     ('/blog/logout', signup.LogoutHandler),
     ('/blog/welcome', signup.ThanksHandler)]
 
-routes = [('/', Home), ('/admin', Admin), (r'/portfolio/(\w+)', PortfolioHandler),
+routes = [('/?', Home), ('/admin', Admin), (r'/portfolio/(\w+)', PortfolioHandler),
         ('/mail', ContactHandler), LogSenderHandler.mapping()] + blog_routes
 
 

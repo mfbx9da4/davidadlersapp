@@ -11,9 +11,6 @@ class LogSenderHandler(InboundMailHandler):
         bodies = mail_message.bodies('text/plain')
         for body in bodies:
             logging.info(body[1].decode())
-
-        
-        logging.info("--------------------------------")
         mail.send_mail(sender="Davidadlersapp Support <da@davidadlersapp.appspotmail.com>",
                       to="David Adler <dalberto.adler@gmail.com>",
                       subject=mail_message.subject,

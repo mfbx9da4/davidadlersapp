@@ -36,17 +36,23 @@ from object_models import BaseHandler, BlogPost
 
 # class JSONFront
 
+
+
 class JSON(BaseHandler):
-	def get(self, id):
-		e = BlogPost.get_by_id(int(blog_id))
-		if e:
-			dic = dict()
-			dic['subject'] = e.subject
-			dic['content'] = e.content
-			dic['created'] = e.created
-			dic['last_modified'] = e.last_modified
-			self.response.headers['Content-Type'] = "application/json"
-			self.response.out.write(json.dumps(dic))
+	def get(self, blog_id):
+		post = BlogPost.get_by_id(int(blog_id))
+		self.response.headers['Content-Type'] = "application/json"
+		if post:
+			self.response.out.write(json.dumps(post.toDict()))
+
+class JSONFront(BaseHandler):
+	def get(self):
+		last10 = BlogPost.all().order('-created').fetch(10)
+		dics = []
+		for post in last10:
+			dics.append(post.toDict())
+		self.response.headers['Content-Type'] = "application/json"
+		self.response.out.write(json.dumps(dics))
 
 
 class EntryPage(BaseHandler):
