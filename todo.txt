@@ -1,5 +1,7 @@
 TODO
-	* aboutme/code/.../cv/
-	* skel fixed position element for nav!
+	* mobile touch to reveal portfolio menu (remove href, onlick: add class .show_children to element)
+
 
 DONE
+	* aboutme/code/.../cv/
+	* skel fixed position element for nav!

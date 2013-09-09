@@ -970,6 +970,7 @@
 		width: 100%;
 		z-index: 10000;
 		cursor: default;
+		font-size: 1.2em;
 	}
 	
 		#nav ul

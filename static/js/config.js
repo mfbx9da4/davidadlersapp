@@ -19,7 +19,7 @@ window._skel_config = {
 			viewportWidt5: 1000
 		},
 		'narrower': {
-			range: '-500',
+			range: '-630',
 			containers: 'fluid',
 			lockViewport: true,
 			grid: {

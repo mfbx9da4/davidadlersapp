@@ -38,6 +38,24 @@
           }
         }
 
+        // Smooth scroll
+        jQuery(function() {
+
+            var _bh = jQuery('body, html'),
+              _window = jQuery(window),
+              _nav = jQuery('#nav');
+
+              jQuery('a').click(function(e) {
+                var t = jQuery(this), h = t.attr('href');
+
+                if (h.charAt(0) == '#' && h.length > 1)
+                {
+                  var pos = Math.max($(h).offset().top - _nav.height() - 20);
+                  e.preventDefault();
+                  _bh.animate({ scrollTop: pos }, 'slow', 'swing');
+                }
+              });
+          });
     </script>
     <noscript><link rel="stylesheet" href="/style/5grid-noscript.min.css" /><link rel="stylesheet" href="/style/style.css" /><link rel="stylesheet" href="/style/style-desktop.css" /></noscript>
     <!--[if lte IE 9]><link rel="stylesheet" href="/style/ie9.css" /><![endif]-->
@@ -52,8 +70,9 @@
             <li><a href="/"> <span class="icon icon-home" /> Home</a></li>
             <li><a href="/#work">About me</a>
               <ul >
-                <li><a href="/#portfolio">Code</a></li>
-                <li><a href="/portfolio/slackline">Slackline</a></li>
+                <li><a href="/portfolio/slackline"><span class="icon icon-ban-circle" /> Slackline</a></li>
+                <li><a href="/#portfolio/philosophy"><span class="icon icon-ban-circle"></span> Inspiring things</a></li>
+                <li><a href="/#portfolio/neuroscience"><span class="icon icon-ban-circle"></span> Neuroscience</a></li>
               </ul>   
             </li>
             <li><a href="/#portfolio"> Portfolio</a>

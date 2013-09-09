@@ -463,6 +463,7 @@
 	{
 		position: relative;
 		border-radius: 7%;
+		margin-bottom: 2em;
 	}
 		.box-style1 p
 		{
@@ -1034,6 +1035,7 @@
 		width: 100%;
 		z-index: 10000;
 		cursor: default;
+		font-size: 1em;
 	}
 	
 		#nav ul
@@ -1090,6 +1092,7 @@
 			_margin: 0; /*IE6 only*/
 			opacity: 0;
 			visibility: hidden;
+			text-align: left;
 			position: absolute;
 			/*top: 0;*/
 			/*left: 0;*/
